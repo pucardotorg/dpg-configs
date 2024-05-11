@@ -12,7 +12,7 @@ ServiceMaps:
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.clerks
           customJsonMapping:
-            indexMapping: {"Data":{"clerkDetails":{"id":"","tenantId":"","applicationNumber":"","individualId":"","isActive":,"status":"","stateRegnNumber":"","auditDetails":{},"additionalDetails":{},},"history":{},"individual":{}}}
+            indexMapping: {"Data":{"clerkDetails":{"id":"","tenantId":"","applicationNumber":"","individualId":"","isActive":,"status":"","stateRegnNumber":"","auditDetails":{},"additionalDetails":{},},"history":{},"individual":{},"auditDetails":{"createdBy":"","lastModifiedBy":"","createdTime":"","lastModifiedTime":""}}}
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.clerkDetails.id
@@ -67,7 +67,7 @@ ServiceMaps:
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.clerks
           customJsonMapping:
-            indexMapping: { "Data": { "clerkDetails": { "id": "","tenantId": "","applicationNumber": "","individualId": "","isActive":,"status": "","stateRegnNumber": "","auditDetails": { },"additionalDetails": { } },"history": { },"individual": { } } }
+            indexMapping: { "Data": { "clerkDetails": { "id": "","tenantId": "","applicationNumber": "","individualId": "","isActive":,"status": "","stateRegnNumber": "","auditDetails": { },"additionalDetails": { } },"history": { },"individual": { },"auditDetails":{"createdBy":"","lastModifiedBy":"","createdTime":"","lastModifiedTime":""} } }
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.clerkDetails.id
