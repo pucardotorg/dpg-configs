@@ -30,6 +30,8 @@ ServiceMaps:
                 outJsonPath: $.Data.advocateDetails.organisationID
               - inJsonPath: $.isActive
                 outJsonPath: $.Data.advocateDetails.isActive
+              - inJsonPath: $.status
+                outJsonPath: $.Data.advocateDetails.status
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.advocateDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
@@ -49,6 +51,8 @@ ServiceMaps:
                     outJsonPath: $.Data.history
                   - inJsonPath: $.ProcessInstances[0]
                     outJsonPath: $.Data.currentProcessInstance
+                  - inJsonPath: $.ProcessInstances[0].state.uuid
+                    outJsonPath: $.Data.status
               - path: http://individual.egov:8080/individual/v1/_search
                 queryParam: limit=1000,offset=0,tenantId=$.tenantId,includeDeleted=true
                 apiRequest: { "RequestInfo": { "authToken": "e87582e2-1ed6-4a0b-9bf5-57322015fd77","userInfo": { "id": 198,"userName": "uatuser5004","name": "Rama","type": "EMPLOYEE","mobileNumber": "7788995004","roles": [ { "name": "ADVOCATE_APPROVER","code": "ADVOCATE_APPROVER","tenantId": "pg" },{ "name": "Employee","code": "EMPLOYEE","tenantId": "pg" },{ "name": "ADVOCATE_CLERK_APPROVER","code": "ADVOCATE_CLERK_APPROVER","tenantId": "pg" },{ "name": "ADVOCATE_CLERK_ROLE","code": "ADVOCATE_CLERK_ROLE","tenantId": "pg" },{ "name": "Super User","code": "SUPERUSER","tenantId": "pg" },{ "name": "ADVOCATE_ROLE","code": "ADVOCATE_ROLE","tenantId": "pg" } ],"tenantId": "pg","uuid": "dede7c1e-886f-40ea-8218-04fed1d24ad6" } },"Individual": { "individualId": $.individualId } }
@@ -86,6 +90,8 @@ ServiceMaps:
                 outJsonPath: $.Data.advocateDetails.organisationID
               - inJsonPath: $.isActive
                 outJsonPath: $.Data.advocateDetails.isActive
+              - inJsonPath: $.status
+                outJsonPath: $.Data.advocateDetails.status
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.advocateDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
@@ -105,6 +111,8 @@ ServiceMaps:
                     outJsonPath: $.Data.history
                   - inJsonPath: $.ProcessInstances[0]
                     outJsonPath: $.Data.currentProcessInstance
+                  - inJsonPath: $.ProcessInstances[0].state.uuid
+                    outJsonPath: $.Data.status
               - path: http://individual.egov:8080/individual/v1/_search
                 queryParam: limit=1000,offset=0,tenantId=$.tenantId,includeDeleted=true
                 apiRequest: { "RequestInfo": { "authToken": "e87582e2-1ed6-4a0b-9bf5-57322015fd77","userInfo": { "id": 198,"userName": "uatuser5004","name": "Rama","type": "EMPLOYEE","mobileNumber": "7788995004","roles": [ { "name": "ADVOCATE_APPROVER","code": "ADVOCATE_APPROVER","tenantId": "pg" },{ "name": "Employee","code": "EMPLOYEE","tenantId": "pg" },{ "name": "ADVOCATE_CLERK_APPROVER","code": "ADVOCATE_CLERK_APPROVER","tenantId": "pg" },{ "name": "ADVOCATE_CLERK_ROLE","code": "ADVOCATE_CLERK_ROLE","tenantId": "pg" },{ "name": "Super User","code": "SUPERUSER","tenantId": "pg" },{ "name": "ADVOCATE_ROLE","code": "ADVOCATE_ROLE","tenantId": "pg" } ],"tenantId": "pg","uuid": "dede7c1e-886f-40ea-8218-04fed1d24ad6" } },"Individual": { "individualId": $.individualId } }
