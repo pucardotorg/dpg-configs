@@ -29,13 +29,13 @@ ServiceMaps:
               - inJsonPath: $.stateRegnNumber
                 outJsonPath: $.Data.clerkDetails.stateRegnNumber
               - inJsonPath: $.auditDetails.createdBy
-                outJsonPath: $.Data.clerkDetails.createdBy
+                outJsonPath: $.Data.auditDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
-                outJsonPath: $.Data.clerkDetails.lastModifiedBy
+                outJsonPath: $.Data.auditDetails.lastModifiedBy
               - inJsonPath: $.auditDetails.createdTime
-                outJsonPath: $.Data.clerkDetails.createdTime
+                outJsonPath: $.Data.auditDetails.createdTime
               - inJsonPath: $.auditDetails.lastModifiedTime
-                outJsonPath: $.Data.clerkDetails.lastModifiedTime
+                outJsonPath: $.Data.auditDetails.lastModifiedTime
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.clerkDetails.additionalDetails
             externalUriMapping:
@@ -84,13 +84,13 @@ ServiceMaps:
               - inJsonPath: $.stateRegnNumber
                 outJsonPath: $.Data.clerkDetails.stateRegnNumber
               - inJsonPath: $.auditDetails.createdBy
-                outJsonPath: $.Data.clerkDetails.createdBy
+                outJsonPath: $.Data.auditDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
-                outJsonPath: $.Data.clerkDetails.lastModifiedBy
+                outJsonPath: $.Data.auditDetails.lastModifiedBy
               - inJsonPath: $.auditDetails.createdTime
-                outJsonPath: $.Data.clerkDetails.createdTime
+                outJsonPath: $.Data.auditDetails.createdTime
               - inJsonPath: $.auditDetails.lastModifiedTime
-                outJsonPath: $.Data.clerkDetails.lastModifiedTime
+                outJsonPath: $.Data.auditDetails.lastModifiedTime
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.clerkDetails.additionalDetails
             externalUriMapping:
