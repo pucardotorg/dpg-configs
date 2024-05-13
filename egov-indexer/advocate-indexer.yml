@@ -65,7 +65,7 @@ ServiceMaps:
     - topic: update-advocate-application
       configKey: INDEX
       indexes:
-        - name: advocate-index
+        - name: advocate-index-test
           type: general
           id: $.id
           isBulk: true
