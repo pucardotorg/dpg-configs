@@ -3,7 +3,7 @@ serviceMaps:
   mappings:
     - version: 1.0
       description: Persists advocate details in tables
-      fromTopic: save-case-application
+      fromTopic: create-case
       isTransaction: true
       module: CASE
       objecIdJsonPath: $.id
@@ -122,7 +122,7 @@ serviceMaps:
             - jsonPath: $.cases.*.representatives.*.representing.*.caseId
             - jsonPath: $.cases.*.representatives.*.representing.*.partyType
             - jsonPath: $.cases.*.representatives.*.representing.*.isActive
-            # - jsonPath: $.cases.*.representatives.*.representing.*.caseId
+#            - jsonPath: $.cases.*.representatives.*.representing.*.caseId
             - jsonPath: $.cases.*.representatives[*][?({id} in @.representing[*].id)].id
             - jsonPath: $.cases.*.representatives.*.representing.*.additionalDetails
               type: JSON
