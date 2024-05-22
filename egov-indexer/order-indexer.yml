@@ -8,7 +8,7 @@ ServiceMaps:
         - name: order-index
           type: general
           id: $.id
-          isBulk: true
+          isBulk: false
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.order
           customJsonMapping:
@@ -30,6 +30,12 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.cnrNumber
               - inJsonPath: $.status
                 outJsonPath: $.Data.orderDetails.status
+              - inJsonPath: $.comments
+                outJsonPath: $.Data.orderDetails.comments
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.orderDetails.documents
+              - inJsonPath: $.statuteSection
+                outJsonPath: $.Data.orderDetails.statuteSection
               - inJsonPath: $.issuedBy
                 outJsonPath: $.Data.orderDetails.issuedBy
               - inJsonPath: $.isActive
@@ -61,7 +67,7 @@ ServiceMaps:
         - name: order-index
           type: general
           id: $.id
-          isBulk: true
+          isBulk: false
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.order
           customJsonMapping:
@@ -83,6 +89,12 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.cnrNumber
               - inJsonPath: $.status
                 outJsonPath: $.Data.orderDetails.status
+              - inJsonPath: $.comments
+                outJsonPath: $.Data.orderDetails.comments
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.orderDetails.documents
+              - inJsonPath: $.statuteSection
+                outJsonPath: $.Data.orderDetails.statuteSection
               - inJsonPath: $.issuedBy
                 outJsonPath: $.Data.orderDetails.issuedBy
               - inJsonPath: $.isActive
