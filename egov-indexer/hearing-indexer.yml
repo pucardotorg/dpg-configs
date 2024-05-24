@@ -43,7 +43,7 @@ ServiceMaps:
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.hearing
           customJsonMapping:
-            indexMapping: { "Data": { "hearing": { "id": "", "tenantId": "", "hearingId": "", "filingNumber": [], "cnrNumbers": [], "applicationNumber": [], "hearingType": "", "status": "", "startTime": "", "endTime": "", , "isActive":,"auditDetails": { },"additionalDetails": { } },"history": { },"individual": { } ,"auditDetails":{"createdBy":"","lastModifiedBy":"","createdTime":"","lastModifiedTime":""},"currentProcessInstance":{} } }
+            indexMapping: { "Data": { "hearing": { "id": "", "tenantId": "", "hearingId": "", "filingNumber": [], "cnrNumbers": [], "applicationNumber": [], "hearingType": "", "status": "", "startTime": "", "endTime": "", "attendees":{}, "transcript": [], "vcLink":"", isActive":,"notes":"", auditDetails": { },"additionalDetails": { } },"history": { },"individual": { } ,"auditDetails":{"createdBy":"","lastModifiedBy":"","createdTime":"","lastModifiedTime":""},"currentProcessInstance":{} } }
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.hearing.id
@@ -65,6 +65,8 @@ ServiceMaps:
                 outJsonPath: $.Data.hearing.startTime
               - inJsonPath: $.endTime
                 outJsonPath: $.Data.hearing.endTime
+              - inJsonPath: $.presidedBy
+                outJsonPath: $.Data.hearing.presidedBy
               - inJsonPath: $.attendees
                 outJsonPath: $.Data.hearing.attendees
               - inJsonPath: $.transcript
