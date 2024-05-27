@@ -10,7 +10,7 @@ ServiceMaps:
           id: $.id
           isBulk: true
           timeStampField: $.auditDetails.createdTime
-          jsonPath: $.artifacts
+          jsonPath: $.artifact
           customJsonMapping:
             indexMapping: {"Data":{ artifactDetails:{"id": "", "tenantId": "", "artifactNumber": "", "evidenceNumber": "", "externalRefNumber": "", "caseId": "", "application": "", "hearing": "", "order": "", "mediaType": "", "artifactType": "", "sourceID": "", "sourceName": "", "applicableTo": [], "createdDate": "", "isActive": "", "status": "", "file": {}, "description": "", "artifactDetails": {}, "comments": [], "additionalDetails": ""},"history":{},"statuteSection":{},"auditDetails":{ "createdBy":"","lastModifiedBy":"","createdTime":"","lastModifiedTime":""},"currentProcessInstance":{}}}
             fieldMapping:
@@ -86,7 +86,7 @@ ServiceMaps:
           id: $.id
           isBulk: true
           timeStampField: $.auditDetails.createdTime
-          jsonPath: $.artifacts
+          jsonPath: $.artifact
           customJsonMapping:
             indexMapping: {"Data":{ artifactDetails:{"id": "", "tenantId": "", "artifactNumber": "", "evidenceNumber": "", "externalRefNumber": "", "caseId": "", "application": "", "hearing": "", "order": "", "mediaType": "", "artifactType": "", "sourceID": "", "sourceName": "", "applicableTo": [], "createdDate": "", "isActive": "", "status": "", "file": {}, "description": "", "artifactDetails": {}, "comments": [], "additionalDetails": ""},"history":{},"statuteSection":{},"auditDetails":{ "createdBy":"","lastModifiedBy":"","createdTime":"","lastModifiedTime":""},"currentProcessInstance":{}}}
             fieldMapping:
