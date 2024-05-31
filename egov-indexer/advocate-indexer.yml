@@ -12,35 +12,7 @@ ServiceMaps:
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.advocate
           customJsonMapping:
-            indexMapping:
-              {
-                "Data":
-                  {
-                    "advocateDetails":
-                      {
-                        "id": "",
-                        "tenantId": "",
-                        "applicationNumber": "",
-                        "barRegistrationNumber": "",
-                        "advocateType": "",
-                        "individualId": "",
-                        "organisationID": "",
-                        "isActive",
-                        "auditDetails": {},
-                        "additionalDetails": {},
-                      },
-                    "history": {},
-                    "individual": {},
-                    "auditDetails":
-                      {
-                        "createdBy": "",
-                        "lastModifiedBy": "",
-                        "createdTime": "",
-                        "lastModifiedTime": "",
-                      },
-                    "currentProcessInstance": {},
-                  },
-              }
+            indexMapping: { "Data": { "advocateDetails": {}, "history": {} } }
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.advocateDetails.id
@@ -177,35 +149,7 @@ ServiceMaps:
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.advocate
           customJsonMapping:
-            indexMapping:
-              {
-                "Data":
-                  {
-                    "advocateDetails":
-                      {
-                        "id": "",
-                        "tenantId": "",
-                        "applicationNumber": "",
-                        "barRegistrationNumber": "",
-                        "advocateType": "",
-                        "individualId": "",
-                        "organisationID": "",
-                        "isActive",
-                        "auditDetails": {},
-                        "additionalDetails": {},
-                      },
-                    "history": {},
-                    "individual": {},
-                    "auditDetails":
-                      {
-                        "createdBy": "",
-                        "lastModifiedBy": "",
-                        "createdTime": "",
-                        "lastModifiedTime": "",
-                      },
-                    "currentProcessInstance": {},
-                  },
-              }
+            indexMapping: { "Data": { "advocateDetails": {}, "history": {} } }
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.advocateDetails.id

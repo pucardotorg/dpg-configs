@@ -12,34 +12,7 @@ ServiceMaps:
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.clerk
           customJsonMapping:
-            indexMapping:
-              {
-                "Data":
-                  {
-                    "clerkDetails":
-                      {
-                        "id": "",
-                        "tenantId": "",
-                        "applicationNumber": "",
-                        "individualId": "",
-                        "isActive",
-                        "status": "",
-                        "stateRegnNumber": "",
-                        "auditDetails": {},
-                        "additionalDetails": {},
-                      },
-                    "history": {},
-                    "individual": {},
-                    "auditDetails":
-                      {
-                        "createdBy": "",
-                        "lastModifiedBy": "",
-                        "createdTime": "",
-                        "lastModifiedTime": "",
-                      },
-                    "currentProcessInstance": {},
-                  },
-              }
+            indexMapping: { "Data": { "clerkDetails": {}, "history": {} } }
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.clerkDetails.id
@@ -172,34 +145,7 @@ ServiceMaps:
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.clerk
           customJsonMapping:
-            indexMapping:
-              {
-                "Data":
-                  {
-                    "clerkDetails":
-                      {
-                        "id": "",
-                        "tenantId": "",
-                        "applicationNumber": "",
-                        "individualId": "",
-                        "isActive",
-                        "status": "",
-                        "stateRegnNumber": "",
-                        "auditDetails": {},
-                        "additionalDetails": {},
-                      },
-                    "history": {},
-                    "individual": {},
-                    "auditDetails":
-                      {
-                        "createdBy": "",
-                        "lastModifiedBy": "",
-                        "createdTime": "",
-                        "lastModifiedTime": "",
-                      },
-                    "currentProcessInstance": {},
-                  },
-              }
+            indexMapping: { "Data": { "clerkDetails": {}, "history": {} } }
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.clerkDetails.id
