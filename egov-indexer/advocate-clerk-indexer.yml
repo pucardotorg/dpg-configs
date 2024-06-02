@@ -7,28 +7,15 @@ ServiceMaps:
       indexes:
         - name: advocate-clerk-index-test
           type: general
-          id: $.id
+          id: $.clerk.id
           isBulk: false
-          timeStampField: $.auditDetails.createdTime
-          jsonPath: $.clerk
+          timeStampField: $.clerk.auditDetails.createdTime
           customJsonMapping:
-            indexMapping: { "Data": { "clerkDetails": {}, "history": {} } }
+            indexMapping: { "Data": { "clerkDetails": {}, "history": {}, "auditDetails": {} } }
             fieldMapping:
-              - inJsonPath: $.id
-                outJsonPath: $.Data.clerkDetails.id
-              - inJsonPath: $.tenantId
-                outJsonPath: $.Data.clerkDetails.tenantId
-              - inJsonPath: $.applicationNumber
-                outJsonPath: $.Data.clerkDetails.applicationNumber
-              - inJsonPath: $.individualId
-                outJsonPath: $.Data.clerkDetails.individualId
-              - inJsonPath: $.isActive
-                outJsonPath: $.Data.clerkDetails.isActive
-              - inJsonPath: $.status
-                outJsonPath: $.Data.clerkDetails.status
-              - inJsonPath: $.stateRegnNumber
-                outJsonPath: $.Data.clerkDetails.stateRegnNumber
-              - inJsonPath: $.auditDetails.createdBy
+              - inJsonPath: $.clerk
+                outJsonPath: $.Data.clerkDetails
+              - inJsonPath: $.clerk.auditDetails.createdBy
                 outJsonPath: $.Data.auditDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
                 outJsonPath: $.Data.auditDetails.lastModifiedBy
@@ -36,11 +23,9 @@ ServiceMaps:
                 outJsonPath: $.Data.auditDetails.createdTime
               - inJsonPath: $.auditDetails.lastModifiedTime
                 outJsonPath: $.Data.auditDetails.lastModifiedTime
-              - inJsonPath: $.additionalDetails
-                outJsonPath: $.Data.clerkDetails.additionalDetails
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
-                queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
+                queryParam: businessIds=$.clerk.applicationNumber,tenantId=$.clerk.tenantId,history=true
                 apiRequest:
                   {
                     "RequestInfo":
@@ -129,7 +114,7 @@ ServiceMaps:
                             "uuid": "dede7c1e-886f-40ea-8218-04fed1d24ad6",
                           },
                       },
-                    "Individual": { "individualId": $.individualId },
+                    "Individual": { "individualId": $.clerk.individualId },
                   }
                 uriResponseMapping:
                   - inJsonPath: $.Individual[0]
@@ -140,28 +125,15 @@ ServiceMaps:
       indexes:
         - name: advocate-clerk-index-test
           type: general
-          id: $.id
+          id: $.clerk.id
           isBulk: false
           timeStampField: $.auditDetails.createdTime
-          jsonPath: $.clerk
           customJsonMapping:
-            indexMapping: { "Data": { "clerkDetails": {}, "history": {} } }
+            indexMapping: { "Data": { "clerkDetails": {}, "history": {}, "auditDetails": {} } }
             fieldMapping:
-              - inJsonPath: $.id
-                outJsonPath: $.Data.clerkDetails.id
-              - inJsonPath: $.tenantId
-                outJsonPath: $.Data.clerkDetails.tenantId
-              - inJsonPath: $.applicationNumber
-                outJsonPath: $.Data.clerkDetails.applicationNumber
-              - inJsonPath: $.individualId
-                outJsonPath: $.Data.clerkDetails.individualId
-              - inJsonPath: $.isActive
-                outJsonPath: $.Data.clerkDetails.isActive
-              - inJsonPath: $.status
-                outJsonPath: $.Data.clerkDetails.status
-              - inJsonPath: $.stateRegnNumber
-                outJsonPath: $.Data.clerkDetails.stateRegnNumber
-              - inJsonPath: $.auditDetails.createdBy
+              - inJsonPath: $.clerk
+                outJsonPath: $.Data.clerkDetails
+              - inJsonPath: $.clerk.auditDetails.createdBy
                 outJsonPath: $.Data.auditDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
                 outJsonPath: $.Data.auditDetails.lastModifiedBy
@@ -169,11 +141,9 @@ ServiceMaps:
                 outJsonPath: $.Data.auditDetails.createdTime
               - inJsonPath: $.auditDetails.lastModifiedTime
                 outJsonPath: $.Data.auditDetails.lastModifiedTime
-              - inJsonPath: $.additionalDetails
-                outJsonPath: $.Data.clerkDetails.additionalDetails
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
-                queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
+                queryParam: businessIds=$.clerk.applicationNumber,tenantId=$.clerk.tenantId,history=true
                 apiRequest:
                   {
                     "RequestInfo":
@@ -262,7 +232,7 @@ ServiceMaps:
                             "uuid": "dede7c1e-886f-40ea-8218-04fed1d24ad6",
                           },
                       },
-                    "Individual": { "individualId": $.individualId },
+                    "Individual": { "individualId": $.clerk.individualId },
                   }
                 uriResponseMapping:
                   - inJsonPath: $.Individual[0]
