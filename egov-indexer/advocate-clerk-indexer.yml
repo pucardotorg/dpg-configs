@@ -21,11 +21,11 @@ ServiceMaps:
                 outJsonPath: $.Data.clerkDetails
               - inJsonPath: $.clerk.auditDetails.createdBy
                 outJsonPath: $.Data.auditDetails.createdBy
-              - inJsonPath: $.auditDetails.lastModifiedBy
+              - inJsonPath: $.clerk.auditDetails.lastModifiedBy
                 outJsonPath: $.Data.auditDetails.lastModifiedBy
-              - inJsonPath: $.auditDetails.createdTime
+              - inJsonPath: $.clerk.auditDetails.createdTime
                 outJsonPath: $.Data.auditDetails.createdTime
-              - inJsonPath: $.auditDetails.lastModifiedTime
+              - inJsonPath: $.clerk.auditDetails.lastModifiedTime
                 outJsonPath: $.Data.auditDetails.lastModifiedTime
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
@@ -141,14 +141,8 @@ ServiceMaps:
             fieldMapping:
               - inJsonPath: $.clerk
                 outJsonPath: $.Data.clerkDetails
-              - inJsonPath: $.clerk.auditDetails.createdBy
-                outJsonPath: $.Data.auditDetails.createdBy
-              - inJsonPath: $.auditDetails.lastModifiedBy
-                outJsonPath: $.Data.auditDetails.lastModifiedBy
-              - inJsonPath: $.auditDetails.createdTime
-                outJsonPath: $.Data.auditDetails.createdTime
-              - inJsonPath: $.auditDetails.lastModifiedTime
-                outJsonPath: $.Data.auditDetails.lastModifiedTime
+              - inJsonPath: $.clerk.auditDetails
+                outJsonPath: $.Data.auditDetails
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.clerk.applicationNumber,tenantId=$.clerk.tenantId,history=true
