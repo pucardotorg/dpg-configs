@@ -11,7 +11,11 @@ ServiceMaps:
           isBulk: false
           timeStampField: $.clerk.auditDetails.createdTime
           customJsonMapping:
-            indexMapping: { "Data": { "clerkDetails": {}, "history": {}, "auditDetails": {} } }
+            indexMapping:
+              {
+                "Data":
+                  { "clerkDetails": {}, "history": {}, "auditDetails": {} },
+              }
             fieldMapping:
               - inJsonPath: $.clerk
                 outJsonPath: $.Data.clerkDetails
@@ -129,7 +133,11 @@ ServiceMaps:
           isBulk: false
           timeStampField: $.auditDetails.createdTime
           customJsonMapping:
-            indexMapping: { "Data": { "clerkDetails": {}, "history": {}, "auditDetails": {} } }
+            indexMapping:
+              {
+                "Data":
+                  { "clerkDetails": {}, "history": {}, "auditDetails": {} },
+              }
             fieldMapping:
               - inJsonPath: $.clerk
                 outJsonPath: $.Data.clerkDetails
