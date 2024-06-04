@@ -12,7 +12,7 @@ ServiceMaps:
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.artifact
           customJsonMapping:
-            indexMapping: {"Data":{ artifactDetails:{"id": "", "tenantId": "", "artifactNumber": "", "evidenceNumber": "", "externalRefNumber": "", "caseId": "", "application": "", "hearing": "", "order": "", "mediaType": "", "artifactType": "", "sourceID": "", "sourceName": "", "applicableTo": [], "createdDate": "", "isActive": "", "status": "", "file": {}, "description": "", "artifactDetails": {}, "comments": [], "additionalDetails": ""},"history":{},"statuteSection":{},"auditDetails":{ "createdBy":"","lastModifiedBy":"","createdTime":"","lastModifiedTime":""},"currentProcessInstance":{}}}
+            indexMapping: {"Data":{ artifactDetails:{"id": "", "tenantId": "", "artifactNumber": "", "evidenceNumber": "", "externalRefNumber": "", "caseId": "", "application": "", "hearing": "", "order": "", "mediaType": "", "artifactType": "", "sourceID": "", "sourceName": "", "applicableTo": [], "createdDate": "", "isActive": "", "status": "", "file": {}, "description": "", "artifactDetails": {}, "comments": [], "additionalDetails": ""},"history":{},"statuteSection":{},"auditDetails":{},"currentProcessInstance":{}}}
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.artifactDetails.id
@@ -58,14 +58,8 @@ ServiceMaps:
                 outJsonPath: $.Data.artifactDetails.comments
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.artifactDetails.additionalDetails
-              - inJsonPath: $.auditDetails.createdBy
-                outJsonPath: $.Data.auditDetails.createdBy
-              - inJsonPath: $.auditDetails.lastModifiedBy
-                outJsonPath: $.Data.auditDetails.lastModifiedBy
-              - inJsonPath: $.auditDetails.createdTime
-                outJsonPath: $.Data.auditDetails.createdTime
-              - inJsonPath: $.auditDetails.lastModifiedTime
-                outJsonPath: $.Data.auditDetails.lastModifiedTime
+              - inJsonPath: $.auditdetails
+                outJsonPath: $.Data.auditDetails
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.artifactNumber,tenantId=$.tenantId,history=true
@@ -88,7 +82,7 @@ ServiceMaps:
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.artifact
           customJsonMapping:
-            indexMapping: {"Data":{ artifactDetails:{"id": "", "tenantId": "", "artifactNumber": "", "evidenceNumber": "", "externalRefNumber": "", "caseId": "", "application": "", "hearing": "", "order": "", "mediaType": "", "artifactType": "", "sourceID": "", "sourceName": "", "applicableTo": [], "createdDate": "", "isActive": "", "status": "", "file": {}, "description": "", "artifactDetails": {}, "comments": [], "additionalDetails": ""},"history":{},"statuteSection":{},"auditDetails":{ "createdBy":"","lastModifiedBy":"","createdTime":"","lastModifiedTime":""},"currentProcessInstance":{}}}
+            indexMapping: {"Data":{ artifactDetails:{"id": "", "tenantId": "", "artifactNumber": "", "evidenceNumber": "", "externalRefNumber": "", "caseId": "", "application": "", "hearing": "", "order": "", "mediaType": "", "artifactType": "", "sourceID": "", "sourceName": "", "applicableTo": [], "createdDate": "", "isActive": "", "status": "", "file": {}, "description": "", "artifactDetails": {}, "comments": [], "additionalDetails": ""},"history":{},"statuteSection":{},"auditDetails":{},"currentProcessInstance":{}}}
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.artifactDetails.id
@@ -134,14 +128,8 @@ ServiceMaps:
                 outJsonPath: $.Data.artifactDetails.comments
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.artifactDetails.additionalDetails
-              - inJsonPath: $.auditDetails.createdBy
-                outJsonPath: $.Data.auditDetails.createdBy
-              - inJsonPath: $.auditDetails.lastModifiedBy
-                outJsonPath: $.Data.auditDetails.lastModifiedBy
-              - inJsonPath: $.auditDetails.createdTime
-                outJsonPath: $.Data.auditDetails.createdTime
-              - inJsonPath: $.auditDetails.lastModifiedTime
-                outJsonPath: $.Data.auditDetails.lastModifiedTime
+              - inJsonPath: $.auditdetails
+                outJsonPath: $.Data.auditDetails
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.artifactNumber,tenantId=$.tenantId,history=true
