@@ -5,14 +5,14 @@ ServiceMaps:
     - topic: save-application
       configKey: INDEX
       indexes:
-        - name: application-index-test
+        - name: application-index
           type: general
           id: $.id
           isBulk: false
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.application
           customJsonMapping:
-            indexMapping: {"Data":{ applicationDetails:{},"history":{},"currentProcessInstance":{}}}
+            indexMapping: {"Data":{ applicationDetails:{},"history":{},"auditDetails":{},currentProcessInstance":{}}}
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.applicationDetails.id
@@ -68,14 +68,8 @@ ServiceMaps:
                 outJsonPath: $.Data.statueSection.auditDetails.lastModifiedTime
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.applicationDetails.additionalDetails
-              - inJsonPath: $.auditDetails.createdBy
-                outJsonPath: $.Data.auditDetails.createdBy
-              - inJsonPath: $.auditDetails.lastModifiedBy
-                outJsonPath: $.Data.auditDetails.lastModifiedBy
-              - inJsonPath: $.auditDetails.createdTime
-                outJsonPath: $.Data.auditDetails.createdTime
-              - inJsonPath: $.auditDetails.lastModifiedTime
-                outJsonPath: $.Data.auditDetails.lastModifiedTime
+              - inJsonPath: $.auditDetails
+                outJsonPath: $.Data.auditDetails
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
@@ -91,14 +85,14 @@ ServiceMaps:
     - topic: update-application
       configKey: INDEX
       indexes:
-        - name: application-index-test
+        - name: application-index
           type: general
           id: $.id
           isBulk: false
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.application
           customJsonMapping:
-            indexMapping: { "Data": { applicationDetails: { },"history": { },"currentProcessInstance": { } } }
+            indexMapping: { "Data": { applicationDetails: {},"history": {},"auditDetails":{},currentProcessInstance": {} } }
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.applicationDetails.id
@@ -154,14 +148,8 @@ ServiceMaps:
                 outJsonPath: $.Data.statueSection.auditDetails.lastModifiedTime
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.applicationDetails.additionalDetails
-              - inJsonPath: $.auditDetails.createdBy
-                outJsonPath: $.Data.auditDetails.createdBy
-              - inJsonPath: $.auditDetails.lastModifiedBy
-                outJsonPath: $.Data.auditDetails.lastModifiedBy
-              - inJsonPath: $.auditDetails.createdTime
-                outJsonPath: $.Data.auditDetails.createdTime
-              - inJsonPath: $.auditDetails.lastModifiedTime
-                outJsonPath: $.Data.auditDetails.lastModifiedTime
+              - inJsonPath: $.auditDetails
+                outJsonPath: $.Data.auditDetails
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
