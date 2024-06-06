@@ -12,7 +12,7 @@ ServiceMaps:
           timeStampField: $.auditdetails.createdTime
           jsonPath: $.artifact
           customJsonMapping:
-            indexMapping: {"Data":{ artifactDetails:{"id": "", "tenantId": "", "artifactNumber": "", "evidenceNumber": "", "externalRefNumber": "", "caseId": "", "application": "", "hearing": "", "order": "", "mediaType": "", "artifactType": "", "sourceID": "", "sourceName": "", "applicableTo": [], "createdDate": "", "isActive": "", "status": "", "file": {}, "description": "", "artifactDetails": {}, "comments": [], "additionalDetails": ""},"history":{},"currentProcessInstance":{}}}
+            indexMapping: {"Data":{ artifactDetails:{"id": "", "tenantId": "", "artifactNumber": "", "evidenceNumber": "", "externalRefNumber": "", "caseId": "", "application": "", "hearing": "", "order": "", "mediaType": "", "artifactType": "", "sourceID": "", "sourceName": "", "createdDate": "", "isActive": "", "status": "", "file": {}, "description": "", "artifactDetails": {}, "additionalDetails": ""},"history":{},"currentProcessInstance":{}}}
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.artifactDetails.id
@@ -40,8 +40,6 @@ ServiceMaps:
                 outJsonPath: $.Data.artifactDetails.sourceID
               - inJsonPath: $.sourceName
                 outJsonPath: $.Data.artifactDetails.sourceName
-              - inJsonPath: $.applicableTo[*]
-                outJsonPath: $.Data.artifactDetails.applicableTo
               - inJsonPath: $.createdDate
                 outJsonPath: $.Data.artifactDetails.createdDate
               - inJsonPath: $.isActive
@@ -54,8 +52,6 @@ ServiceMaps:
                 outJsonPath: $.Data.artifactDetails.description
               - inJsonPath: $.artifactDetails
                 outJsonPath: $.Data.artifactDetails.artifactDetails
-              - inJsonPath: $.comments[*]
-                outJsonPath: $.Data.artifactDetails.comments
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.artifactDetails.additionalDetails
             externalUriMapping:
@@ -80,7 +76,7 @@ ServiceMaps:
           timeStampField: $.auditdetails.createdTime
           jsonPath: $.artifact
           customJsonMapping:
-            indexMapping: {"Data":{ artifactDetails:{"id": "", "tenantId": "", "artifactNumber": "", "evidenceNumber": "", "externalRefNumber": "", "caseId": "", "application": "", "hearing": "", "order": "", "mediaType": "", "artifactType": "", "sourceID": "", "sourceName": "", "applicableTo": [], "createdDate": "", "isActive": "", "status": "", "file": {}, "description": "", "artifactDetails": {}, "comments": [], "additionalDetails": ""},"history":{},"currentProcessInstance":{}}}
+            indexMapping: {"Data":{ artifactDetails:{"id": "", "tenantId": "", "artifactNumber": "", "evidenceNumber": "", "externalRefNumber": "", "caseId": "", "application": "", "hearing": "", "order": "", "mediaType": "", "artifactType": "", "sourceID": "", "sourceName": "", "createdDate": "", "isActive": "", "status": "", "file": {}, "description": "", "artifactDetails": {},  "additionalDetails": ""},"history":{},"currentProcessInstance":{}}}
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.artifactDetails.id
@@ -108,8 +104,6 @@ ServiceMaps:
                 outJsonPath: $.Data.artifactDetails.sourceID
               - inJsonPath: $.sourceName
                 outJsonPath: $.Data.artifactDetails.sourceName
-              - inJsonPath: $.applicableTo[*]
-                outJsonPath: $.Data.artifactDetails.applicableTo
               - inJsonPath: $.createdDate
                 outJsonPath: $.Data.artifactDetails.createdDate
               - inJsonPath: $.isActive
@@ -122,8 +116,6 @@ ServiceMaps:
                 outJsonPath: $.Data.artifactDetails.description
               - inJsonPath: $.artifactDetails
                 outJsonPath: $.Data.artifactDetails.artifactDetails
-              - inJsonPath: $.comments[*]
-                outJsonPath: $.Data.artifactDetails.comments
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.artifactDetails.additionalDetails
             externalUriMapping:
