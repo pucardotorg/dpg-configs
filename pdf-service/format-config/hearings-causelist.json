@@ -1,0 +1,297 @@
+{
+    "key": "hearings-causelist",
+    "config": {
+  "pageSize": "A4",
+  "pageOrientation": "landscape",
+  "content": [
+    {
+      "style": "noc-head",
+      "table": {
+        "widths": [
+          60,
+          "*",
+          230
+        ],
+        "height": 600,
+        "body": [
+          [
+            {
+              "image": "{{logoImage}}",
+              "width": 50,
+              "height": 61.25,
+              "margin": [
+                10,
+                10,
+                0,
+                0
+              ]
+            },
+            {
+              "stack": [
+                {
+                  "text": "{{logo-header}}",
+                  "fontSize": 18,
+                  "color": "#000000",
+                  "bold": true
+                },
+                {
+                  "text": "{{address}}",
+                  "fontSize": 10,
+                  "color": "#000000"
+                },
+                {
+                  "text": "{{phoneNumber}} | {{email}}",
+                  "fontSize": 10,
+                  "color": "#000000"
+                }
+              ],
+              "alignment": "left",
+              "margin": [
+                10,
+                10,
+                0,
+                0
+              ]
+            },
+            {
+              "stack": [
+                {
+                  "text": "{{TodaysCase}}",
+                  "style": {
+                    "bold": true,
+                    "fontSize": 18,
+                    "color": "#5f5f5f"
+                  }
+                },
+                {
+                  "text": "{{time}}",
+                  "style": {
+                    "fontSize": 14
+                  }
+                }
+              ],
+              "alignment": "right",
+              "margin": [
+                0,
+                10,
+                15,
+                0
+              ]
+            }
+          ]
+        ]
+      },
+      "layout": "noBorders",
+      "fillColor": "#f4f4f4"
+    },
+    {
+      "margin": [
+        0,
+        20,
+        0,
+        10
+      ],
+      "table": {
+        "widths": [
+          "50%",
+          "50%"
+        ],
+        "body": [
+          [
+            {
+              "table": {
+                "body": [
+                  [
+                    {
+                      "text": "{{Date}}",
+                      "fontSize": 15,
+                      "bold": true
+                    },
+                    {
+                      "text": "{{date}}",
+                      "fontSize": 15,
+                      "margin": [
+                        20,
+                        0,
+                        0,
+                        0
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "text": "{{CasesHeard}}",
+                      "fontSize": 15,
+                      "bold": true
+                    },
+                    {
+                      "text": "{{casesHeard}}",
+                      "fontSize": 15,
+                      "margin": [
+                        20,
+                        0,
+                        0,
+                        0
+                      ]
+                    }
+                  ]
+                ]
+              },
+              "layout": "noBorders"
+            },
+            {
+              "table": {
+                "body": [
+                  [
+                    {
+                      "text": "{{TotalCasesListed}}",
+                      "fontSize": 15,
+                      "bold": true
+                    },
+                    {
+                      "text": "{{totalCasesListed}}",
+                      "fontSize": 15,
+                      "margin": [
+                        20,
+                        0,
+                        0,
+                        0
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "text": "{{CasesAdjourned}}",
+                      "fontSize": 15,
+                      "bold": true
+                    },
+                    {
+                      "text": "{{casesAdjourned}}",
+                      "fontSize": 15,
+                      "margin": [
+                        20,
+                        0,
+                        0,
+                        0
+                      ]
+                    }
+                  ]
+                ]
+              },
+              "layout": "noBorders"
+            }
+          ]
+        ]
+      },
+      "layout": "noBorders"
+    },
+    {
+      "text": "Cases",
+      "style": "header"
+    },
+    {
+      "margin": [
+        -25,
+        0,
+        20,
+        0
+      ],
+      "table": {
+        "headerRows": 1,
+        "widths": [
+          "4%",
+          "15%",
+          "15%",
+          "15%",
+          "10%",
+          "41%"
+        ],
+        "body": [
+          [
+            {
+              "style": "table-colums-header",
+              "text": "{{SNO}}"
+            },
+            {
+              "style": "table-colums-header",
+              "text": "{{CCNO}}"
+            },
+            {
+              "style": "table-colums-header",
+              "text": "{{CaseName}}"
+            },
+            {
+              "style": "table-colums-header",
+              "text": "{{AdvocateName}}"
+            },
+            {
+              "style": "table-colums-header",
+              "text": "{{StageOfHearings}}"
+            },
+            {
+              "style": "table-colums-header",
+              "text": "{{ReasonOfHearing}}"
+            }
+          ],
+          "{{#cases}}[{\"text\":\"{{Sno}}\",\"alignment\":\"left\",\"fontSize\":9},{\"text\":\"{{CCNo}}\",\"alignment\":\"left\",\"fontSize\":9},{\"text\":\"{{caseName}}\",\"alignment\":\"left\",\"fontSize\":9},{\"text\":\"{{advocateName}}\",\"alignment\":\"right\",\"fontSize\":9},{\"text\":\"{{stageOfHearings}}\",\"alignment\":\"right\",\"fontSize\":9},{\"text\":\"{{reasonOfHearing}}\",\"alignment\":\"left\",\"fontSize\":9}]{{/cases}}"
+        ]
+      },
+      "layout": {
+        "hLineColor": "#D6D5D4",
+        "vLineColor": "#D6D5D4"
+      }
+    }
+  ],
+  "footer": "function(currentPage, pageCount) { \n    return { text: 'Page ' + currentPage.toString() + ' of ' + pageCount.toString() + ' ' , alignment: 'right' };\n  }",
+  "styles": {
+    "header": {
+      "fontSize": 16,
+      "bold": true,
+      "margin": [
+        -20,
+        40,
+        10,
+        10
+      ]
+    },
+    "noc-head": {
+      "margin": [
+        -40,
+        -40,
+        -40,
+        1
+      ]
+    },
+    "receipt-logo-header": {
+      "color": "#000000",
+      "fontSize": 14,
+      "bold": true,
+      "letterSpacing": 0.74,
+      "margin": [
+        0,
+        0,
+        0,
+        5
+      ]
+    },
+    "table-colums-header": {
+      "fillColor": "#eeeeee",
+      "bold": true,
+      "fontSize": 9
+    },
+    "sl-no-table-row": {
+      "margin": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "fontSize": 9
+    },
+    "table_last_row": {
+      "bold": true,
+      "fillColor": "#eeeeee"
+    }
+  }
+}
+}
