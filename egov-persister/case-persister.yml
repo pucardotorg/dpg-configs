@@ -93,7 +93,6 @@ serviceMaps:
             - jsonPath: $.cases.litigants.*.auditDetails.lastModifiedBy
             - jsonPath: $.cases.litigants.*.auditDetails.createdTime
             - jsonPath: $.cases.litigants.*.auditDetails.lastModifiedTime
-
         - query: INSERT INTO public.dristi_case_representatives(id, tenantid, advocateid, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: cases.representatives.*
           jsonMaps:
@@ -301,3 +300,4 @@ serviceMaps:
             - jsonPath: $.cases.representatives.*.representing.*.auditDetails.lastModifiedBy
             - jsonPath: $.cases.representatives.*.representing.*.auditDetails.createdTime
             - jsonPath: $.cases.representatives.*.representing.*.auditDetails.lastModifiedTime
+
