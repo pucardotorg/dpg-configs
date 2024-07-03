@@ -389,3 +389,16 @@ serviceMaps:
             - jsonPath: $.representing.*.auditDetails.lastModifiedBy
             - jsonPath: $.representing.*.auditDetails.createdTime
             - jsonPath: $.representing.*.auditDetails.lastModifiedTime
+
+    - version: 1.0
+      description: Update case overall workflow in tables
+      fromTopic: case-overall-status-topic
+      isTransaction: true
+      queryMaps:
+        - query: UPDATE  dristi_cases SET stage =?, substage =? where filingnumber =? and tenantid =?;
+          basePath: case
+          jsonMaps:
+            - jsonPath: $.case.stage
+            - jsonPath: $.case.substage
+            - jsonPath: $.case.filingNumber
+            - jsonPath: $.case.tenantId
