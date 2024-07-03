@@ -396,9 +396,9 @@ serviceMaps:
       isTransaction: true
       queryMaps:
         - query: UPDATE  dristi_cases SET stage =?, substage =? where filingnumber =? and tenantid =?;
-          basePath: case
+          basePath: caseOverallStatus
           jsonMaps:
-            - jsonPath: $.case.stage
-            - jsonPath: $.case.substage
-            - jsonPath: $.case.filingNumber
-            - jsonPath: $.case.tenantId
+            - jsonPath: $.caseOverallStatus.stage
+            - jsonPath: $.caseOverallStatus.substage
+            - jsonPath: $.caseOverallStatus.filingNumber
+            - jsonPath: $.caseOverallStatus.tenantId
