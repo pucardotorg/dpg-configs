@@ -26,8 +26,20 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.caseDescription
               - inJsonPath: $.filingNumber
                 outJsonPath: $.Data.caseDetails.filingNumber
-              - inJsonPath: $.caseNumber
-                outJsonPath: $.Data.caseDetails.caseNumber
+              - inJsonPath: $.courtCaseNumber
+                outJsonPath: $.Data.caseDetails.courtCaseNumber
+              - inJsonPath: $.cnrNumber
+                outJsonPath: $.Data.caseDetails.cnrNumber
+              - inJsonPath: $.caseDetails
+                outJsonPath: $.Data.caseDetails.caseDetails
+              - inJsonPath: $.statutesAndSections
+                outJsonPath: $.Data.caseDetails.statutesAndSections
+              - inJsonPath: $.litigants
+                outJsonPath: $.Data.caseDetails.litigants
+              - inJsonPath: $.representatives
+                outJsonPath: $.Data.caseDetails.representatives
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.caseDetails.documents
               - inJsonPath: $.courtId
                 outJsonPath: $.Data.caseDetails.courtId
               - inJsonPath: $.benchId
@@ -129,8 +141,20 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.caseDescription
               - inJsonPath: $.filingNumber
                 outJsonPath: $.Data.caseDetails.filingNumber
-              - inJsonPath: $.caseNumber
-                outJsonPath: $.Data.caseDetails.caseNumber
+              - inJsonPath: $.courtCaseNumber
+                outJsonPath: $.Data.caseDetails.courtCaseNumber
+              - inJsonPath: $.cnrNumber
+                outJsonPath: $.Data.caseDetails.cnrNumber
+              - inJsonPath: $.caseDetails
+                outJsonPath: $.Data.caseDetails.caseDetails
+              - inJsonPath: $.statutesAndSections
+                outJsonPath: $.Data.caseDetails.statutesAndSections
+              - inJsonPath: $.litigants
+                outJsonPath: $.Data.caseDetails.litigants
+              - inJsonPath: $.representatives
+                outJsonPath: $.Data.caseDetails.representatives
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.caseDetails.documents
               - inJsonPath: $.courtId
                 outJsonPath: $.Data.caseDetails.courtId
               - inJsonPath: $.benchId
