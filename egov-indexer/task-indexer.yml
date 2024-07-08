@@ -32,6 +32,10 @@ ServiceMaps:
                 outJsonPath: $.Data.taskDetails.dateClosed
               - inJsonPath: $.taskNumber
                 outJsonPath: $.Data.taskDetails.taskNumber
+              - inJsonPath: $.cnrNumber
+                outJsonPath: $.Data.taskDetails.cnrNumber
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.taskDetails.documents
               - inJsonPath: $.taskType
                 outJsonPath: $.Data.taskDetails.taskType
               - inJsonPath: $.amount
@@ -121,6 +125,10 @@ ServiceMaps:
                 outJsonPath: $.Data.taskDetails.filingNumber
               - inJsonPath: $.taskNumber
                 outJsonPath: $.Data.taskDetails.taskNumber
+              - inJsonPath: $.cnrNumber
+                outJsonPath: $.Data.taskDetails.cnrNumber
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.taskDetails.documents
               - inJsonPath: $.dateCloseBy
                 outJsonPath: $.Data.taskDetails.dateCloseBy
               - inJsonPath: $.dateClosed
