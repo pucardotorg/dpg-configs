@@ -436,6 +436,12 @@ serviceMaps:
       description: updates additional details of a case in dristi_cases table when litigant or advocate joins the case
       fromTopic: join-case-update-case-additional-details
       isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objectIdJsonPath: $.caseOverallStatus.filingNumber
+      tenantIdJsonPath: $.caseOverallStatus.tenantId
+      transactionCodeJsonPath: $.caseOverallStatus.filingNumber
+      auditAttributeBasePath: $
       queryMaps:
         - query: UPDATE dristi_cases SET additionaldetails = ?, lastmodifiedby = ?, lastmodifiedtime = ? WHERE filingNumber = ?;
           basePath: $
