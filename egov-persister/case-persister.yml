@@ -5,11 +5,12 @@ serviceMaps:
       description: Persists case details in tables
       fromTopic: save-case-application
       isTransaction: true
+      isAuditEnabled: true
       module: CASE
-      objectIdJsonPath: $.id
-      tenantIdJsonPath: $.tenantId
-      transactionCodeJsonPath: $.filingNumber
-      auditAttributeBasePath: $.cases
+      objectIdJsonPath: $.cases.id
+      tenantIdJsonPath: $.cases.tenantId
+      transactionCodeJsonPath: $.cases.filingNumber
+      auditAttributeBasePath: $
       queryMaps:
         - query: INSERT INTO dristi_cases(id, tenantid, resolutionmechanism, casetitle, casedescription, filingnumber, casenumber,cnrnumber,courtcasenumber, accesscode, isactive, courtid, benchid, judgeid, stage, substage, filingdate,judgementdate, registrationdate, casecategory, natureofpleading, status, remarks, casedetails, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: cases
@@ -186,6 +187,12 @@ serviceMaps:
       description: Update case details in tables
       fromTopic: update-case-application
       isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objectIdJsonPath: $.cases.id
+      tenantIdJsonPath: $.cases.tenantId
+      transactionCodeJsonPath: $.cases.filingNumber
+      auditAttributeBasePath: $
       queryMaps:
         - query: INSERT INTO dristi_cases (id, tenantid, resolutionmechanism, casetitle, casedescription, filingnumber, casenumber, cnrnumber, courtcasenumber, accesscode, isactive, courtid, benchid, judgeid, stage, substage, filingdate, judgementdate,registrationdate, casecategory, natureofpleading, status, remarks, casedetails, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, resolutionmechanism = EXCLUDED.resolutionmechanism, casetitle = EXCLUDED.casetitle, casedescription = EXCLUDED.casedescription, filingnumber = EXCLUDED.filingnumber, casenumber = EXCLUDED.casenumber, cnrnumber = EXCLUDED.cnrnumber, courtcasenumber = EXCLUDED.courtcasenumber, accesscode = EXCLUDED.accesscode, courtid = EXCLUDED.courtid, benchid = EXCLUDED.benchid, judgeid = EXCLUDED.judgeid, stage = EXCLUDED.stage, substage = EXCLUDED.substage, filingdate = EXCLUDED.filingdate, judgementdate = EXCLUDED.judgementdate, registrationdate = EXCLUDED.registrationdate, casecategory = EXCLUDED.casecategory, natureofpleading = EXCLUDED.natureofpleading, status = EXCLUDED.status, remarks = EXCLUDED.remarks, isactive = EXCLUDED.isactive, casedetails = EXCLUDED.casedetails, additionaldetails = EXCLUDED.additionaldetails, createdby = EXCLUDED.createdby, lastmodifiedby = EXCLUDED.lastmodifiedby, createdtime = EXCLUDED.createdtime, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
           basePath: cases
@@ -316,6 +323,12 @@ serviceMaps:
       description: Update case status in tables
       fromTopic: update-case-status-application
       isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objectIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: $
       queryMaps:
         - query: UPDATE dristi_cases SET status = ?, lastmodifiedby = ?,  lastmodifiedtime = ? WHERE filingNumber=?;
           basePath: $
@@ -329,6 +342,11 @@ serviceMaps:
       description: Persists new litigant for a case in dristi_case_litigants table
       fromTopic: litigant-join-case
       isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objectIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: $
       queryMaps:
         - query: INSERT INTO public.dristi_case_litigants(id, tenantid, partycategory, individualid, organisationid, partytype, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: $
@@ -354,6 +372,11 @@ serviceMaps:
       description: Persists new representative for a case in dristi_case_representatives table
       fromTopic: representative-join-case
       isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objectIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: $
       queryMaps:
         - query: INSERT INTO public.dristi_case_representatives(id, tenantid, advocateid, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: $
@@ -394,6 +417,12 @@ serviceMaps:
       description: Update case overall workflow in tables
       fromTopic: case-overall-status-topic
       isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objectIdJsonPath: $.caseOverallStatus.filingNumber
+      tenantIdJsonPath: $.caseOverallStatus.tenantId
+      transactionCodeJsonPath: $.caseOverallStatus.filingNumber
+      auditAttributeBasePath: $
       queryMaps:
         - query: UPDATE  dristi_cases SET stage =?, substage =? where filingnumber =? and tenantid =?;
           basePath: caseOverallStatus
