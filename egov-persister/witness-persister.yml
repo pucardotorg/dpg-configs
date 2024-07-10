@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: WITNESS
-      objectIdJsonPath: $.witness.id
+      objecIdJsonPath: $.witness.id
       tenantIdJsonPath: $.witness.tenantId
       transactionCodeJsonPath: $.witness.filingNumber
       auditAttributeBasePath: $
@@ -37,7 +37,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: WITNESS
-      objectIdJsonPath: $.witness.id
+      objecIdJsonPath: $.witness.id
       tenantIdJsonPath: $.witness.tenantId
       transactionCodeJsonPath: $.witness.filingNumber
       auditAttributeBasePath: $
