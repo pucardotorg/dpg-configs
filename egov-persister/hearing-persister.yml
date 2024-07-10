@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: HEARING
-      objectIdJsonPath: $.hearing.id
+      objecIdJsonPath: $.hearing.id
       tenantIdJsonPath: $.hearing.tenantId
       auditAttributeBasePath: $
       queryMaps:
@@ -68,7 +68,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: HEARING
-      objectIdJsonPath: $.hearing.id
+      objecIdJsonPath: $.hearing.id
       tenantIdJsonPath: $.hearing.tenantId
       auditAttributeBasePath: $
       queryMaps:

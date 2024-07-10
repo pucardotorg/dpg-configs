@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: ORDER
-      objectIdJsonPath: $.order.id
+      objecIdJsonPath: $.order.id
       tenantIdJsonPath: $.order.tenantId
       transactionCodeJsonPath: $.order.filingNumber
       auditAttributeBasePath: $
@@ -84,7 +84,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: ORDER
-      objectIdJsonPath: $.order.id
+      objecIdJsonPath: $.order.id
       tenantIdJsonPath: $.order.tenantId
       transactionCodeJsonPath: $.order.filingNumber
       auditAttributeBasePath: $

@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: EVIDENCE
-      objectIdJsonPath: $.artifact.id
+      objecIdJsonPath: $.artifact.id
       tenantIdJsonPath: $.artifact.tenantId
       auditAttributeBasePath: $
       queryMaps:
@@ -80,7 +80,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: EVIDENCE
-      objectIdJsonPath: $.artifact.id
+      objecIdJsonPath: $.artifact.id
       tenantIdJsonPath: $.artifact.tenantId
       auditAttributeBasePath: $
       queryMaps:

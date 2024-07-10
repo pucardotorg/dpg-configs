@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: TASK
-      objectIdJsonPath: $.task.id
+      objecIdJsonPath: $.task.id
       tenantIdJsonPath: $.task.tenantId
       transactionCodeJsonPath: $.task.filingNumber
       auditAttributeBasePath: $
@@ -74,7 +74,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: TASK
-      objectIdJsonPath: $.task.id
+      objecIdJsonPath: $.task.id
       tenantIdJsonPath: $.task.tenantId
       transactionCodeJsonPath: $.task.filingNumber
       auditAttributeBasePath: $
