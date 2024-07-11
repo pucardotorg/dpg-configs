@@ -7,10 +7,10 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CASE
-      objecIdJsonPath: $.cases.id
-      tenantIdJsonPath: $.cases.tenantId
-      transactionCodeJsonPath: $.cases.filingNumber
-      auditAttributeBasePath: $
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: cases
       queryMaps:
         - query: INSERT INTO dristi_cases(id, tenantid, resolutionmechanism, casetitle, casedescription, filingnumber, casenumber,cnrnumber,courtcasenumber, accesscode, isactive, courtid, benchid, judgeid, stage, substage, filingdate,judgementdate, registrationdate, casecategory, natureofpleading, status, remarks, casedetails, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: cases
@@ -189,10 +189,10 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CASE
-      objecIdJsonPath: $.cases.id
-      tenantIdJsonPath: $.cases.tenantId
-      transactionCodeJsonPath: $.cases.filingNumber
-      auditAttributeBasePath: $
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: cases
       queryMaps:
         - query: INSERT INTO dristi_cases (id, tenantid, resolutionmechanism, casetitle, casedescription, filingnumber, casenumber, cnrnumber, courtcasenumber, accesscode, isactive, courtid, benchid, judgeid, stage, substage, filingdate, judgementdate,registrationdate, casecategory, natureofpleading, status, remarks, casedetails, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, resolutionmechanism = EXCLUDED.resolutionmechanism, casetitle = EXCLUDED.casetitle, casedescription = EXCLUDED.casedescription, filingnumber = EXCLUDED.filingnumber, casenumber = EXCLUDED.casenumber, cnrnumber = EXCLUDED.cnrnumber, courtcasenumber = EXCLUDED.courtcasenumber, accesscode = EXCLUDED.accesscode, courtid = EXCLUDED.courtid, benchid = EXCLUDED.benchid, judgeid = EXCLUDED.judgeid, stage = EXCLUDED.stage, substage = EXCLUDED.substage, filingdate = EXCLUDED.filingdate, judgementdate = EXCLUDED.judgementdate, registrationdate = EXCLUDED.registrationdate, casecategory = EXCLUDED.casecategory, natureofpleading = EXCLUDED.natureofpleading, status = EXCLUDED.status, remarks = EXCLUDED.remarks, isactive = EXCLUDED.isactive, casedetails = EXCLUDED.casedetails, additionaldetails = EXCLUDED.additionaldetails, createdby = EXCLUDED.createdby, lastmodifiedby = EXCLUDED.lastmodifiedby, createdtime = EXCLUDED.createdtime, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
           basePath: cases
@@ -419,10 +419,10 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CASE
-      objecIdJsonPath: $.caseOverallStatus.filingNumber
-      tenantIdJsonPath: $.caseOverallStatus.tenantId
-      transactionCodeJsonPath: $.caseOverallStatus.filingNumber
-      auditAttributeBasePath: $
+      objecIdJsonPath: $.filingNumber
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: caseOverallStatus
       queryMaps:
         - query: UPDATE  dristi_cases SET stage =?, substage =? where filingnumber =? and tenantid =?;
           basePath: caseOverallStatus
@@ -438,9 +438,9 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CASE
-      objecIdJsonPath: $.caseOverallStatus.filingNumber
-      tenantIdJsonPath: $.caseOverallStatus.tenantId
-      transactionCodeJsonPath: $.caseOverallStatus.filingNumber
+      objecIdJsonPath: $.caseFilingNumber
+      tenantIdJsonPath: $.RequestInfo.userInfo.uuid.tenantId
+      transactionCodeJsonPath: $.caseFilingNumber
       auditAttributeBasePath: $
       queryMaps:
         - query: UPDATE dristi_cases SET additionaldetails = ?, lastmodifiedby = ?, lastmodifiedtime = ? WHERE filingNumber = ?;

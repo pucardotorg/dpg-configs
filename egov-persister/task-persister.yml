@@ -7,10 +7,10 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: TASK
-      objecIdJsonPath: $.task.id
-      tenantIdJsonPath: $.task.tenantId
-      transactionCodeJsonPath: $.task.filingNumber
-      auditAttributeBasePath: $
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: task
       queryMaps:
 
         - query: INSERT INTO dristi_task(id, tenantId, orderId, filingNumber, cnrNumber, taskNumber, createdDate, dateCloseBy, dateClosed, taskDescription, taskType, taskDetails, status, assignedTo, isActive, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
@@ -74,10 +74,10 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: TASK
-      objecIdJsonPath: $.task.id
-      tenantIdJsonPath: $.task.tenantId
-      transactionCodeJsonPath: $.task.filingNumber
-      auditAttributeBasePath: $
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: task
       queryMaps:
         - query: INSERT INTO dristi_task(id, tenantId, orderId, filingNumber, cnrNumber, taskNumber, createdDate, dateCloseBy, dateClosed, taskDescription, taskType, taskDetails, status, assignedTo, isActive, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, orderId = EXCLUDED.orderId, filingNumber = EXCLUDED.filingNumber, taskNumber = EXCLUDED.taskNumber, cnrNumber = EXCLUDED.cnrNumber, createdDate = EXCLUDED.createdDate, dateCloseBy = EXCLUDED.dateCloseBy, dateClosed = EXCLUDED.dateClosed, taskDescription = EXCLUDED.taskDescription, taskType = EXCLUDED.taskType, taskDetails = EXCLUDED.taskDetails, assignedTo = EXCLUDED.assignedTo, status = EXCLUDED.status, isactive = EXCLUDED.isactive, additionaldetails = EXCLUDED.additionaldetails, createdby = EXCLUDED.createdby, lastmodifiedby = EXCLUDED.lastmodifiedby, createdtime = EXCLUDED.createdtime, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
           basePath: task

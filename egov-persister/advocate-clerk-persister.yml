@@ -7,9 +7,9 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: ADVOCATE-CLERK
-      objecIdJsonPath: $.clerk.id
-      tenantIdJsonPath: $.clerk.tenantId
-      auditAttributeBasePath: $
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: clerk
       queryMaps:
         - query: INSERT INTO dristi_advocate_clerk(id, tenantId, applicationNumber,status, individualId, stateRegnNumber,isActive , createdBy, lastModifiedBy, createdTime, lastModifiedTime,additionalDetails) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?,?,?);
           basePath: clerk
@@ -46,9 +46,9 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: ADVOCATE-CLERK
-      objecIdJsonPath: $.clerk.id
-      tenantIdJsonPath: $.clerk.tenantId
-      auditAttributeBasePath: $
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: clerk
       queryMaps:
         - query: UPDATE  dristi_advocate_clerk SET status =?, isActive =?,lastModifiedBy =?,lastModifiedTime = ? where id =?;
           basePath: clerk

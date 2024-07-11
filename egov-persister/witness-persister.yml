@@ -7,10 +7,10 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: WITNESS
-      objecIdJsonPath: $.witness.id
-      tenantIdJsonPath: $.witness.tenantId
-      transactionCodeJsonPath: $.witness.filingNumber
-      auditAttributeBasePath: $
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: witness
       queryMaps:
 
         - query: INSERT INTO dristi_witness(id, caseid, filingnumber, cnrnumber, witnessidentifier, individualid, remarks, isactive, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
@@ -37,10 +37,10 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: WITNESS
-      objecIdJsonPath: $.witness.id
-      tenantIdJsonPath: $.witness.tenantId
-      transactionCodeJsonPath: $.witness.filingNumber
-      auditAttributeBasePath: $
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: witness
       queryMaps:
 
         - query: INSERT INTO dristi_witness (id, caseid, filingnumber, cnrnumber, witnessidentifier, individualid, remarks, isactive, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET caseid = EXCLUDED.caseid, filingnumber = EXCLUDED.filingnumber, cnrnumber = EXCLUDED.cnrnumber, witnessidentifier = EXCLUDED.witnessidentifier, individualid = EXCLUDED.individualid, remarks = EXCLUDED.remarks, isactive = EXCLUDED.isactive, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
