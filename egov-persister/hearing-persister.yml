@@ -7,9 +7,9 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: HEARING
-      objecIdJsonPath: $.hearing.id
-      tenantIdJsonPath: $.hearing.tenantId
-      auditAttributeBasePath: $
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: hearing
       queryMaps:
         - query: INSERT INTO dristi_hearing(id,tenantId,hearingId,filingNumber,cnrNumbers,applicationNumbers,hearingType,status,startTime,endTime,presidedBy,attendees,transcript,vcLink,isActive,additionalDetails,notes,createdBy,lastModifiedBy,createdTime,lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: hearing
@@ -68,9 +68,9 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: HEARING
-      objecIdJsonPath: $.hearing.id
-      tenantIdJsonPath: $.hearing.tenantId
-      auditAttributeBasePath: $
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: hearing
       queryMaps:
         - query: UPDATE dristi_hearing SET hearingType = ?, status = ?, startTime = ?, endTime = ?,presidedBy=?, attendees = ?, transcript = ?, vcLink = ?, isActive = ?, additionalDetails = ?, notes = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE id = ?;
           basePath: hearing
