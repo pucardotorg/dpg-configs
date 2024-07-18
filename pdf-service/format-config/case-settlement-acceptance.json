@@ -1,0 +1,227 @@
+{
+  "key": "case-settlement-acceptance",
+  "config": {
+    "content": [
+      {
+        "stack": [
+          {
+            "text": "IN THE Court of {{courtName}}",
+            "style": "header"
+          },
+          {
+            "text": "{{caseName}}",
+            "style": "caseName"
+          },
+          {
+            "text": "{{caseNumber}}",
+            "style": "caseNumber"
+          },
+          {
+            "text": "ORDER",
+            "style": "orderTitle"
+          }
+        ]
+      },
+      {
+        "text": "Settlement of Case by {{partyName}} and {{otherPartyName}}",
+        "style": "subTitle"
+      },
+      {
+        "text": "{{date}}",
+        "style": "date"
+      },
+      {
+        "text": "WHEREAS, {{partyName}} and {{otherPartyName}}, the parties to this case, have reached a settlement agreement; and",
+        "style": "bodyText"
+      },
+      {
+        "text": "WHEREAS, the Court has reviewed the terms of the settlement agreement submitted by the parties on {{settlementAgreementDate}} and",
+        "style": "bodyText"
+      },
+      {
+        "text": "Settlement Mechanism: {{mechanism}}",
+        "style": "bodyText"
+      },
+      {
+        "text": "Has the Settlement already been implemented here: {{implemented}}",
+        "style": "bodyText"
+      },
+      {
+        "text": "WHEREAS, the Court finds that the settlement is fair, reasonable, and in the best interests of the parties involved;",
+        "style": "bodyText"
+      },
+      {
+        "text": "NOW, THEREFORE, IT IS HEREBY ORDERED that:",
+        "style": "orderText"
+      },
+      {
+        "ol": [
+          {
+            "text": "The settlement agreement between {{partyName}} and {{otherPartyName}} is hereby APPROVED.",
+            "style": "listItem"
+          },
+          {
+            "text": "The case, {{caseName}}, Case Number {{caseNumber}}, is hereby DISMISSED with prejudice.",
+            "style": "listItem"
+          },
+          {
+            "text": "Each party shall bear its own costs and attorney’s fees unless otherwise specified in the settlement agreement.",
+            "style": "listItem"
+          },
+          {
+            "text": "The Court retains jurisdiction to enforce the terms of the settlement agreement if necessary.",
+            "style": "listItem"
+          }
+        ],
+        "style": "list"
+      },
+      {
+        "text": "{{additionalComments}}",
+        "style": "additionalComments"
+      },
+      {
+        "text": "IT IS SO ORDERED.",
+        "style": "orderText"
+      },
+      {
+        "text": "{{judgeSignature}}",
+        "style": "signature"
+      },
+      {
+        "text": "{{judgeName}}",
+        "style": "signature"
+      },
+      {
+        "text": "Judge, District Court of {{courtName}}",
+        "style": "signature"
+      },
+      {
+        "text": "{{courtSeal}}",
+        "style": "signature"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          20,
+          0,
+          0
+        ]
+      },
+      "caseName": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "caseNumber": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          0,
+          0,
+          20
+        ]
+      },
+      "orderTitle": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "subTitle": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          0
+        ]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "bold": true,
+        "margin": [
+          0,
+          0,
+          0,
+          20
+        ]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "list": {
+        "margin": [
+          20,
+          10,
+          0,
+          10
+        ]
+      },
+      "listItem": {
+        "fontSize": 11,
+        "margin": [
+          0,
+          5,
+          0,
+          5
+        ]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  }
+}
