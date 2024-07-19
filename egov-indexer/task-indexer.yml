@@ -48,6 +48,8 @@ ServiceMaps:
                 outJsonPath: $.Data.taskDetails.isActive
               - inJsonPath: $.assignedTo
                 outJsonPath: $.Data.taskDetails.assignedTo
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.workflow
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.taskDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
@@ -145,6 +147,8 @@ ServiceMaps:
                 outJsonPath: $.Data.taskDetails.isActive
               - inJsonPath: $.assignedTo
                 outJsonPath: $.Data.taskDetails.assignedTo
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.workflow
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.taskDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy

@@ -66,6 +66,8 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.isActive
               - inJsonPath: $.remarks
                 outJsonPath: $.Data.caseDetails.remarks
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.caseDetails.workflow
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.caseDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
@@ -181,6 +183,8 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.isActive
               - inJsonPath: $.remarks
                 outJsonPath: $.Data.caseDetails.remarks
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.caseDetails.workflow
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.caseDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
