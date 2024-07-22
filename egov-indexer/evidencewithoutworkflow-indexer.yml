@@ -65,7 +65,7 @@ ServiceMaps:
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.artifactDetails.additionalDetails
               - inJsonPath: $.workflow
-                outJsonPath: $.Data.workflow
+                outJsonPath: $.Data.artifactDetails.workflow
               - inJsonPath: $.auditdetails
                 outJsonPath: $.Data.auditDetails
 
@@ -132,6 +132,6 @@ ServiceMaps:
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.artifactDetails.additionalDetails
               - inJsonPath: $.workflow
-                outJsonPath: $.Data.workflow
+                outJsonPath: $.Data.artifactDetails.workflow
               - inJsonPath: $.auditdetails
                 outJsonPath: $.Data.auditDetails
