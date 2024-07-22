@@ -79,10 +79,9 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: task
       queryMaps:
-        - query: INSERT INTO dristi_task(id, tenantId, orderId, filingNumber, cnrNumber, taskNumber, createdDate, dateCloseBy, dateClosed, taskDescription, taskType, taskDetails, status, assignedTo, isActive, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, orderId = EXCLUDED.orderId, filingNumber = EXCLUDED.filingNumber, taskNumber = EXCLUDED.taskNumber, cnrNumber = EXCLUDED.cnrNumber, createdDate = EXCLUDED.createdDate, dateCloseBy = EXCLUDED.dateCloseBy, dateClosed = EXCLUDED.dateClosed, taskDescription = EXCLUDED.taskDescription, taskType = EXCLUDED.taskType, taskDetails = EXCLUDED.taskDetails, assignedTo = EXCLUDED.assignedTo, status = EXCLUDED.status, isactive = EXCLUDED.isactive, additionaldetails = EXCLUDED.additionaldetails, createdby = EXCLUDED.createdby, lastmodifiedby = EXCLUDED.lastmodifiedby, createdtime = EXCLUDED.createdtime, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
+        - query: UPDATE dristi_task SET tenantId=?, orderId=?, filingNumber=?, cnrNumber=?, taskNumber=?, createdDate=?, dateCloseBy=?, dateClosed=?, taskDescription=?, taskType=?, taskDetails=?, status=?, assignedTo=?, isActive=?, additionalDetails=?, lastModifiedBy=?, lastModifiedTime=? WHERE id=?;
           basePath: task
           jsonMaps:
-            - jsonPath: $.task.id
             - jsonPath: $.task.tenantId
             - jsonPath: $.task.orderId
             - jsonPath: $.task.filingNumber
@@ -104,15 +103,12 @@ serviceMaps:
             - jsonPath: $.task.additionalDetails
               type: JSON
               dbType: JSONB
-            - jsonPath: $.task.auditDetails.createdBy
             - jsonPath: $.task.auditDetails.lastModifiedBy
-            - jsonPath: $.task.auditDetails.createdTime
             - jsonPath: $.task.auditDetails.lastModifiedTime
+            - jsonPath: $.task.id
 
-        - query: INSERT INTO dristi_task_amount(id, amount, type, task_id, paymentRefNumber, status, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET amount = EXCLUDED.amount, paymentRefNumber = EXCLUDED.paymentRefNumber, type = EXCLUDED.type, task_id = EXCLUDED.task_id, additionalDetails = EXCLUDED.additionalDetails, status = EXCLUDED.status;
-          basePath: task.amount
+        - query: UPDATE dristi_task_amount SET amount=?, type=?, task_id=?, paymentRefNumber=?, status=?, additionalDetails=? WHERE id=?;
           jsonMaps:
-            - jsonPath: $.task.amount.id
             - jsonPath: $.task.amount.amount
             - jsonPath: $.task.amount.type
             - jsonPath: $.task.id
@@ -121,11 +117,11 @@ serviceMaps:
             - jsonPath: $.task.amount.additionalDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.task.amount.id
 
-        - query: INSERT INTO dristi_task_document(id, fileStore, documentUid, documentType, task_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, task_id = EXCLUDED.task_id, additionalDetails = EXCLUDED.additionalDetails;
+        - query: UPDATE dristi_task_document SET fileStore=?, documentUid=?, documentType=?, task_id=?, additionalDetails=? WHERE id=?;
           basePath: task.documents.*
           jsonMaps:
-            - jsonPath: $.task.documents.*.id
             - jsonPath: $.task.documents.*.fileStore
             - jsonPath: $.task.documents.*.documentUid
             - jsonPath: $.task.documents.*.documentType
@@ -133,3 +129,4 @@ serviceMaps:
             - jsonPath: $.task.documents.*.additionalDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.task.documents.*.id
