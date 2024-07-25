@@ -493,11 +493,13 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: caseOverallStatus
       queryMaps:
-        - query: UPDATE  dristi_cases SET stage =?, substage =? where filingnumber =? and tenantid =?;
+        - query: UPDATE  dristi_cases SET stage =?, substage =?, lastmodifiedby = ?, lastmodifiedtime = ? where filingnumber =? and tenantid =?;
           basePath: caseOverallStatus
           jsonMaps:
             - jsonPath: $.caseOverallStatus.stage
             - jsonPath: $.caseOverallStatus.substage
+            - jsonPath: $.caseOverallStatus.auditDetails.lastModifiedBy
+            - jsonPath: $.caseOverallStatus.auditDetails.lastModifiedTime
             - jsonPath: $.caseOverallStatus.filingNumber
             - jsonPath: $.caseOverallStatus.tenantId
 
