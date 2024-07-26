@@ -58,13 +58,15 @@
                   "variable": "date",
                   "value": {
                     "path": "$.date"
-                  }
+                  },
+                  "type": "date"
                 },
                 {
                   "variable": "hearingDate",
                   "value": {
                     "path": "$.hearingDate"
-                  }
+                  },
+                  "type": "date"
                 },
                 {
                   "variable": "additionalComments",

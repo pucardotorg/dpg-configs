@@ -12,7 +12,7 @@
               {
                 "stack": [
                   {
-                    "text": "In the Court of {{courtName}}, {{place}}, {{state}}",
+                    "text": "In the {{courtName}}, {{place}}, {{state}}",
                     "style": "header"
                   },
                   {
@@ -76,7 +76,7 @@
                     "style": "signature"
                   },
                   {
-                    "text": "Judge, District Court of {{courtName}}",
+                    "text": "Judge, District {{courtName}}",
                     "style": "signature"
                   },
                   {
