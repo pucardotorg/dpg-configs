@@ -1,0 +1,85 @@
+{
+    "key": "summons-order",
+    "DataConfigs": {
+      "serviceName": "rainmaker-common",
+      "version": "1.0.0",
+      "baseKeyPath": "$.TaskSummon.*",
+      "entityIdPath": "$.summonId",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "topic": "common-pdf-generation-3",
+          "mappings": [
+            {
+              "direct": [
+                {
+                  "variable": "respondentName",
+                  "value": {
+                    "path": "$.name",
+                    "defaultValue": "NA"
+                  }
+                },
+                {
+                  "variable": "respondentAddress",
+                  "value": {
+                    "path": "$.address",
+                    "defaultValue": "NA"
+                  }
+                },
+                {
+                  "variable": "caseCharge",
+                  "value": {
+                    "path": "$.caseCharge",
+                    "defaultValue": "NA"
+                  }
+                },
+                {
+                  "variable": "judgeName",
+                  "value": {
+                    "path": "$.judgeName",
+                    "defaultValue": "NA"
+                  }
+                },
+                {
+                  "variable": "courtName",
+                  "value": {
+                    "path": "$.courtName",
+                    "defaultValue": "NA"
+                  }
+                },
+                {
+                  "variable": "hearingDate",
+                  "value": {
+                    "path": "$.hearingDate",
+                    "defaultValue": "NA"
+                  }
+                },
+                {
+                  "variable": "embeddedUrl", 
+                  "value": {
+                    "path": "$.embeddedUrl"
+                  }
+                },
+                {
+                  "variable": "issueDate",
+                  "value": {
+                    "path": "$.issueDate",
+                    "defaultValue": "NA"
+                  }
+                }
+              ]
+            },
+            {
+                  "qrcodeConfig": [
+                    {
+                        "variable": "qr_code_image",
+                        "value":"{{embeddedUrl}}"
+                    }
+                  ]
+              }
+          ]
+        }
+      ]
+    }
+  }
+  
