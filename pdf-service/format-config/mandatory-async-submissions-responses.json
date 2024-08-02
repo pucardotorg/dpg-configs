@@ -12,7 +12,7 @@
               {
                 "stack": [
                   {
-                    "text": "In the Court of {{courtName}}, {{place}}, {{state}}",
+                    "text": "In the {{courtName}}, {{place}}, {{state}}",
                     "style": "header"
                   },
                   {
@@ -38,7 +38,7 @@
                   {
                     "ol": [
                       {
-                        "text": "The parties shall submit their respective evidence and documents as listed {{documentList}} through the court’s online portal no later than {{evidenceSubmissionDeadline}}. The submission should include all relevant materials intended to be relied upon during the proceedings.",
+                        "text": "The {{parties}} shall submit their respective evidence and documents as listed {{documentList}} through the court’s online portal no later than {{evidenceSubmissionDeadline}}. The submission should include all relevant materials intended to be relied upon during the proceedings.",
                         "style": "listItem"
                       },
                       {

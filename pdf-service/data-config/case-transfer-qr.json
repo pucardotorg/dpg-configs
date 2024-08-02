@@ -52,7 +52,8 @@
                 "variable": "date",
                 "value": {
                   "path": "$.date"
-                }
+                },
+                "type": "date"
               },
               {
                 "variable": "applicationId",

@@ -49,6 +49,12 @@
                 }
               },
               {
+                "variable": "parties",
+                "value": {
+                  "path": "$.parties"
+                }
+              },
+              {
                 "variable": "documentList",
                 "value": {
                   "path": "$.documentList"

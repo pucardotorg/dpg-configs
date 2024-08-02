@@ -92,7 +92,7 @@
         "style": "signature"
       },
       {
-        "text": "Judge, District Court of {{courtName}}",
+        "text": "Judge, District {{courtName}}",
         "style": "signature"
       },
       {
