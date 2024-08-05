@@ -5,7 +5,7 @@
       {
         "stack": [
           {
-            "text": "IN THE Court of {{courtName}}",
+            "text": "IN THE {{courtName}}",
             "style": "header"
           },
           {

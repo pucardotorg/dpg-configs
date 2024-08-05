@@ -1,5 +1,5 @@
 {
-  "key": "accept-adr-application",
+  "key": "reject-adr-application",
   "config": {
     "content": [
       {
@@ -23,7 +23,7 @@
         ]
       },
       {
-        "text": "Acceptance of Application for Alternative Dispute Resolution (ADR)",
+        "text": "Rejection of Application for Alternative Dispute Resolution (ADR)",
         "style": "subTitle"
       },
       {
@@ -35,7 +35,7 @@
         "style": "bodyText"
       },
       {
-        "text": "Upon review of the application and consideration of the nature of the dispute, the Court finds that ADR is an appropriate and beneficial avenue for resolving the issues presented in this case. The Court recognizes the potential for ADR to promote efficiency, reduce litigation costs, and foster a mutually agreeable resolution between the parties.",
+        "text": "Upon review of the application and consideration of the nature of the dispute, the Court finds that ADR is not an appropriate or feasible avenue for resolving the issues presented in this case at this time. The Court notes {{provideBriefReasoning}}.",
         "style": "bodyText"
       },
       {
@@ -45,23 +45,23 @@
       {
         "ol": [
           {
-            "text": "The application for referral to Alternative Dispute Resolution (ADR) submitted by {{partyName}} is ACCEPTED.",
+            "text": "The application for referral to Alternative Dispute Resolution (ADR) submitted by {{partyName}} is REJECTED.",
             "style": "listItem"
           },
           {
-            "text": "The parties are directed to participate in ADR proceedings, including but not limited to {{specifyModeOfADR}}, with the goal of resolving their dispute amicably.",
+            "text": "The case shall proceed through the traditional litigation process as previously scheduled.",
             "style": "listItem"
           },
           {
-            "text": "The parties shall engage in good faith negotiations and cooperate fully with the appointed mediator, arbitrator, or other ADR facilitator.",
-            "style": "listItem"
-          },
-          {
-            "text": "The Court shall retain jurisdiction over the matter pending the outcome of the ADR process.",
+            "text": "The parties are directed to comply with all procedural requirements and deadlines set forth by the Court.",
             "style": "listItem"
           }
         ],
         "style": "list"
+      },
+      {
+        "text": "{{reasonForRejection}}",
+        "style": "additionalComments"
       },
       {
         "text": "{{additionalComments}}",
@@ -86,6 +86,23 @@
       {
         "text": "{{courtSeal}}",
         "style": "signature"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
       }
     ],
     "styles": {
@@ -197,6 +214,11 @@
           0,
           0
         ]
+      },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
       }
     }
   }

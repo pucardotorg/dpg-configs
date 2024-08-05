@@ -1,25 +1,23 @@
 {
-  "key": "schedule-hearing-date",
+  "key": "reject-reschedule-request-qr",
   "config": {
     "content": [
       {
         "table": {
-          "widths": ["*"],
+          "widths": [
+            "*"
+          ],
           "body": [
             [
               {
                 "stack": [
                   {
-                    "text": "In the {{courtName}}, {{place}}, {{state}}",
+                    "text": "IN THE {{courtName}}",
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}} of {{year}}",
-                    "style": "subHeader"
-                  },
-                  {
-                    "text": "In the matter of: {{caseName}}",
-                    "style": "subHeader"
+                    "text": "{{caseName}} and {{caseNumber}}",
+                    "style": "caseNameNumber"
                   },
                   {
                     "text": "ORDER",
@@ -30,15 +28,15 @@
                     "style": "date"
                   },
                   {
-                    "text": "This matter comes before the Court for the purpose of scheduling the next hearing date in the above-captioned case.",
+                    "text": "This matter comes before the Court for the purpose of considering the request for rescheduling the hearing date in the above-captioned case.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "WHEREAS, the Court is tasked with scheduling proceedings in a timely and efficient manner;",
+                    "text": "WHEREAS, {{partyNames}} has/have filed a request {{applicationId}} for the rescheduling of the hearing date, citing {{reasonForRescheduling}};",
                     "style": "bodyText"
                   },
                   {
-                    "text": "WHEREAS, the Court has reviewed the case docket and considered the availability of the parties and their respective counsels;",
+                    "text": "WHEREAS, after due consideration, the Court finds that sufficient cause for rescheduling has not been demonstrated;",
                     "style": "bodyText"
                   },
                   {
@@ -46,17 +44,12 @@
                     "style": "orderText"
                   },
                   {
-                    "ol": [
-                      {
-                        "text": "The next hearing date in the above-captioned case shall be scheduled for {{dateOfNextHearing}}.",
-                        "style": "listItem"
-                      },
-                      {
-                        "text": "{{partyNames}} shall make necessary arrangements to appear at the scheduled hearing date and time.",
-                        "style": "listItem"
-                      }
-                    ],
-                    "style": "list"
+                    "text": "The request for rescheduling the hearing date in the above-captioned case is hereby DENIED for the following reasons {{reasonsForRescheduling}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "The original hearing date scheduled for {{originalHearingDate}} shall remain in effect.",
+                    "style": "bodyText"
                   },
                   {
                     "text": "{{additionalComments}}",
@@ -84,7 +77,29 @@
                   }
                 ],
                 "alignment": "left",
-                "margin": [0, 20, 0, 20]
+                "margin": [
+                  0,
+                  10,
+                  0,
+                  20
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
               }
             ]
           ]
@@ -97,47 +112,86 @@
         "fontSize": 14,
         "bold": true,
         "alignment": "center",
-        "margin": [0, 0, 0, 0]
+        "margin": [
+          0,
+          0,
+          0,
+          0
+        ]
       },
-      "subHeader": {
+      "caseNameNumber": {
         "fontSize": 14,
         "bold": true,
         "alignment": "center",
-        "margin": [0, 0, 0, 10]
+        "margin": [
+          0,
+          0,
+          0,
+          20
+        ]
       },
       "orderTitle": {
         "fontSize": 14,
         "bold": true,
-        "alignment": "left",
-        "margin": [0, 20, 0, 0]
+        "alignment": "center",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
       },
       "date": {
         "fontSize": 12,
         "bold": true,
         "alignment": "left",
-        "margin": [0, 0, 0, 10]
+        "margin": [
+          0,
+          10,
+          0,
+          20
+        ]
       },
       "bodyText": {
         "fontSize": 11,
-        "margin": [0, 10, 0, 10]
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
       },
       "orderText": {
         "fontSize": 12,
-        "margin": [0, 20, 0, 10]
-      },
-      "list": {
-        "margin": [20, 10, 0, 10]
-      },
-      "listItem": {
-        "fontSize": 11,
-        "margin": [0, 5, 0, 5]
+        "margin": [
+          0,
+          20,
+          0,
+          10
+        ]
       },
       "additionalComments": {
         "fontSize": 11,
-        "margin": [0, 10, 0, 0]
+        "italics": true,
+        "margin": [
+          0,
+          10,
+          0,
+          0
+        ]
       },
       "signature": {
         "fontSize": 12,
+        "alignment": "left",
+        "margin": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "qr-code": {
+        "color": "#000000",
         "alignment": "left",
         "margin": [0, 0, 0, 0]
       }

@@ -1,11 +1,11 @@
 {
-  "key": "reject-adr-application",
+  "key": "reject-adr-application-qr",
   "config": {
     "content": [
       {
         "stack": [
           {
-            "text": "In the Court of {{courtName}}, {{place}}, {{state}}",
+            "text": "In the {{courtName}}, {{place}}, {{state}}",
             "style": "header"
           },
           {

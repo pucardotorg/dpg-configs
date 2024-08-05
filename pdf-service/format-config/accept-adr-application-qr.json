@@ -1,5 +1,5 @@
 {
-  "key": "accept-adr-application",
+  "key": "accept-adr-application-qr",
   "config": {
     "content": [
       {
@@ -86,6 +86,23 @@
       {
         "text": "{{courtSeal}}",
         "style": "signature"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
       }
     ],
     "styles": {
@@ -197,6 +214,11 @@
           0,
           0
         ]
+      },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
       }
     }
   }

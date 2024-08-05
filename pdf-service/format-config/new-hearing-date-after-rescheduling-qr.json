@@ -1,5 +1,5 @@
 {
-  "key": "reschedule-request-judge",
+  "key": "new-hearing-date-after-rescheduling-qr",
   "config": {
     "content": [
       {
@@ -14,7 +14,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "{{caseName}} and {{CaseNumber}}",
+                    "text": "{{caseName}} and {{caseNumber}}",
                     "style": "caseNameNumber"
                   },
                   {
@@ -30,7 +30,11 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "WHEREAS, the Court finds it necessary to reschedule the hearing date for the efficient adjudication of this matter;",
+                    "text": "WHEREAS, the Court has previously granted a request for rescheduling the hearing date;",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "WHEREAS, a new hearing date has been determined;",
                     "style": "bodyText"
                   },
                   {
@@ -38,17 +42,12 @@
                     "style": "orderText"
                   },
                   {
-                    "ol": [
-                      {
-                        "text": "The hearing date in the above-captioned case scheduled for {{originalHearingDate}} is hereby RESCHEDULED for {{reasonForRescheduling}}. A new date shall be communicated to the parties in due course.",
-                        "style": "listItem"
-                      },
-                      {
-                        "text": "All parties and their counsels shall make necessary arrangements to appear at the rescheduled hearing.",
-                        "style": "listItem"
-                      }
-                    ],
-                    "style": "list"
+                    "text": "The hearing in the above-captioned case is hereby RESCHEDULED to {{newHearingDate}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "All parties and their counsels shall make necessary arrangements to appear at the rescheduled hearing.",
+                    "style": "bodyText"
                   },
                   {
                     "text": "IT IS SO ORDERED.",
@@ -82,6 +81,23 @@
           ]
         },
         "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
       }
     ],
     "styles": {
@@ -91,6 +107,11 @@
         "alignment": "center",
         "margin": [0, 20, 0, 0]
       },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      },
       "caseNameNumber": {
         "fontSize": 14,
         "bold": true,
@@ -98,16 +119,16 @@
         "margin": [0, 0, 0, 20]
       },
       "orderTitle": {
-        "fontSize": 16,
+        "fontSize": 14,
         "bold": true,
-        "alignment": "center",
-        "margin": [0, 10, 0, 10]
+        "alignment": "left",
+        "margin": [0, 10, 0, 0]
       },
       "date": {
         "fontSize": 12,
         "bold": true,
         "alignment": "left",
-        "margin": [0, 0, 0, 20]
+        "margin": [0, 0, 0, 10]
       },
       "bodyText": {
         "fontSize": 11,
@@ -116,13 +137,6 @@
       "orderText": {
         "fontSize": 12,
         "margin": [0, 10, 0, 10]
-      },
-      "list": {
-        "margin": [20, 10, 0, 10]
-      },
-      "listItem": {
-        "fontSize": 11,
-        "margin": [0, 5, 0, 5]
       },
       "additionalComments": {
         "fontSize": 11,
