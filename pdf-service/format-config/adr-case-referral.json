@@ -1,0 +1,201 @@
+{
+  "key": "adr-case-referral",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "In the {{courtName}}, {{place}}, {{state}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No. {{caseNumber}} of {{year}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "ORDER",
+                    "style": "orderTitle"
+                  },
+                  {
+                    "text": "Referral to Alternative Dispute Resolution (ADR)",
+                    "style": "subTitle"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "This matter comes before the Court regarding the referral of the parties to Alternative Dispute Resolution (ADR) in an effort to facilitate the resolution of the underlying dispute.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "After careful consideration of the nature of the case, the issues in contention, and the potential benefits of ADR, the Court finds it appropriate to encourage the parties to explore avenues for resolving their dispute outside of traditional litigation.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "The Court recognizes the advantages of ADR in promoting efficiency, cost-effectiveness, and the preservation of relationships between the parties. Moreover, ADR can often lead to outcomes that are mutually satisfactory and tailored to the specific needs of the parties involved.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Accordingly, it is hereby ORDERED that:",
+                    "style": "orderText"
+                  },
+                  {
+                    "text": "The parties are REFERRED to Alternative Dispute Resolution (ADR) proceedings, including but not limited to {{adrMode}}, to attempt to resolve their dispute amicably.",
+                    "style": "listText"
+                  },
+                  {
+                    "text": "The parties shall engage in good faith negotiations and cooperate fully with the appointed mediator, arbitrator, or other ADR facilitator.",
+                    "style": "listText"
+                  },
+                  {
+                    "text": "The Court shall retain jurisdiction over the matter pending the outcome of the ADR process.",
+                    "style": "listText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "additionalComments"
+                  },
+                  {
+                    "text": "IT IS SO ORDERED.",
+                    "style": "orderText"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Judge, District {{courtName}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [
+                  0,
+                  20,
+                  0,
+                  20
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "orderTitle": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          30,
+          0,
+          10
+        ]
+      },
+      "subTitle": {
+        "fontSize": 12,
+        "margin": [
+          0,
+          5,
+          0,
+          10
+        ]
+      },
+      "date": {
+        "fontSize": 12,
+        "margin": [
+          0,
+          -10,
+          0,
+          20
+        ]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "listText": {
+        "fontSize": 11,
+        "margin": [
+          0,
+          0,
+          0,
+          5
+        ]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  }
+}

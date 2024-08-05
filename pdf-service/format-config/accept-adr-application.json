@@ -1,0 +1,203 @@
+{
+  "key": "accept-adr-application",
+  "config": {
+    "content": [
+      {
+        "stack": [
+          {
+            "text": "In the {{courtName}}, {{place}}, {{state}}",
+            "style": "header"
+          },
+          {
+            "text": "Case No. {{caseNumber}} of {{year}}",
+            "style": "subHeader"
+          },
+          {
+            "text": "In the matter of: {{caseName}}",
+            "style": "subHeader"
+          },
+          {
+            "text": "ORDER",
+            "style": "orderTitle"
+          }
+        ]
+      },
+      {
+        "text": "Acceptance of Application for Alternative Dispute Resolution (ADR)",
+        "style": "subTitle"
+      },
+      {
+        "text": "{{date}}",
+        "style": "date"
+      },
+      {
+        "text": "This matter comes before the Court upon the application {{applicationId}} submitted by {{partyName}}, represented by {{advocateName}}, requesting referral to Alternative Dispute Resolution (ADR).",
+        "style": "bodyText"
+      },
+      {
+        "text": "Upon review of the application and consideration of the nature of the dispute, the Court finds that ADR is an appropriate and beneficial avenue for resolving the issues presented in this case. The Court recognizes the potential for ADR to promote efficiency, reduce litigation costs, and foster a mutually agreeable resolution between the parties.",
+        "style": "bodyText"
+      },
+      {
+        "text": "Accordingly, it is hereby ORDERED that:",
+        "style": "orderText"
+      },
+      {
+        "ol": [
+          {
+            "text": "The application for referral to Alternative Dispute Resolution (ADR) submitted by {{partyName}} is ACCEPTED.",
+            "style": "listItem"
+          },
+          {
+            "text": "The parties are directed to participate in ADR proceedings, including but not limited to {{specifyModeOfADR}}, with the goal of resolving their dispute amicably.",
+            "style": "listItem"
+          },
+          {
+            "text": "The parties shall engage in good faith negotiations and cooperate fully with the appointed mediator, arbitrator, or other ADR facilitator.",
+            "style": "listItem"
+          },
+          {
+            "text": "The Court shall retain jurisdiction over the matter pending the outcome of the ADR process.",
+            "style": "listItem"
+          }
+        ],
+        "style": "list"
+      },
+      {
+        "text": "{{additionalComments}}",
+        "style": "additionalComments"
+      },
+      {
+        "text": "IT IS SO ORDERED.",
+        "style": "orderText"
+      },
+      {
+        "text": "{{judgeSignature}}",
+        "style": "signature"
+      },
+      {
+        "text": "{{judgeName}}",
+        "style": "signature"
+      },
+      {
+        "text": "Judge, {{courtName}}",
+        "style": "signature"
+      },
+      {
+        "text": "{{courtSeal}}",
+        "style": "signature"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          20,
+          0,
+          0
+        ]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          5,
+          0,
+          0
+        ]
+      },
+      "orderTitle": {
+        "fontSize": 15,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          15,
+          0,
+          10
+        ]
+      },
+      "subTitle": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          0
+        ]
+      },
+      "date": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          0,
+          0,
+          10
+        ]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "list": {
+        "margin": [
+          20,
+          10,
+          0,
+          10
+        ]
+      },
+      "listItem": {
+        "fontSize": 11,
+        "margin": [
+          0,
+          5,
+          0,
+          5
+        ]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  }
+}
