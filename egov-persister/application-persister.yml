@@ -104,6 +104,18 @@ serviceMaps:
             - jsonPath: $.application.auditDetails.lastModifiedTime
             - jsonPath: $.application.id
 
+        - query: INSERT INTO dristi_application_document(id, fileStore, documentUid, documentType, application_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, application_id = EXCLUDED.application_id, additionalDetails = EXCLUDED.additionalDetails;
+          basePath: application.documents.*
+          jsonMaps:
+            - jsonPath: $.application.documents.*.id
+            - jsonPath: $.application.documents.*.fileStore
+            - jsonPath: $.application.documents.*.documentUid
+            - jsonPath: $.application.documents.*.documentType
+            - jsonPath: $.application.id
+            - jsonPath: $.application.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
     - version: 1.0
       description: Update application status in tables
       fromTopic: update-application-status-application

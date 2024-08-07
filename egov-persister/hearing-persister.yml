@@ -98,6 +98,18 @@ serviceMaps:
             - jsonPath: $.hearing.auditDetails.lastModifiedTime
             - jsonPath: $.hearing.id
 
+        - query: INSERT INTO dristi_hearing_document(id,fileStore,documentUid,documentType,hearingId,additionalDetails) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, hearingId = EXCLUDED.hearingId, additionalDetails = EXCLUDED.additionalDetails;
+          basePath: hearing.documents.*
+          jsonMaps:
+            - jsonPath: $.hearing.documents.*.id
+            - jsonPath: $.hearing.documents.*.fileStore
+            - jsonPath: $.hearing.documents.*.documentUid
+            - jsonPath: $.hearing.documents.*.documentType
+            - jsonPath: $.hearing.id
+            - jsonPath: $.hearing.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+
     - version: 1.0
       description: Update hearing start and end time in tables
       fromTopic: update-start-end-time
