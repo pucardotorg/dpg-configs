@@ -1,0 +1,167 @@
+{
+  "key": "emergency-rescheduling-application",
+  "config": {
+    "content": [
+      {
+        "stack": [
+          {
+            "text": "IN THE COURT OF {{courtComplex}}",
+            "style": "header"
+          },
+          {
+            "text": "{{caseType}}/Case No. {{caseNumber}} of {{year}}",
+            "style": "subHeader"
+          },
+          {
+            "text": "{{caseName}}",
+            "style": "subHeader"
+          },
+          {
+            "text": "APPLICATION FOR RESCHEDULING OF HEARING DATE",
+            "style": "orderTitle"
+          }
+        ]
+      },
+      {
+        "text": "To,",
+        "style": "bodyText"
+      },
+      {
+        "text": "The Honorable {{judgeNameOrDesignation}},",
+        "style": "bodyText"
+      },
+      {
+        "text": "{{courtAddress}}",
+        "style": "bodyText"
+      },
+      {
+        "text": "{{date}}",
+        "style": "date"
+      },
+      {
+        "text": "Subject: Application for Rescheduling of Hearing Date",
+        "style": "subject"
+      },
+      {
+        "text": "My client, {{partyName}}, the {{role}}, hereby submits this application before this Honorable Court seeking to reschedule the hearing date in the matter of {{caseName}}.",
+        "style": "bodyText"
+      },
+      {
+        "text": "The case was originally posted for hearing on {{initialHearingDate}}. However, due to {{reasonForRescheduling}}, attending the hearing will not be possible. My client and I will make ourselves available for the same for all dates after {{rescheduleDates}}.",
+        "style": "bodyText"
+      },
+      {
+        "text": "I respectfully request the Court's consideration to reschedule the hearing date. Thank you for considering this request. I remain available to provide any further information or clarification that the Court may require.",
+        "style": "bodyText"
+      },
+      {
+        "text": "{{additionalComments}}",
+        "style": "additionalComments"
+      },
+      {
+        "text": "{{advocateSignature}}",
+        "style": "signature"
+      },
+      {
+        "text": "{{advocateName}}",
+        "style": "signature"
+      },
+      {
+        "text": "{{barCouncilRegistrationNumber}}",
+        "style": "signature"
+      },
+      {
+        "text": "Advocate for {{partyName}}",
+        "style": "signature"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          20,
+          0,
+          0
+        ]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          5,
+          0,
+          0
+        ]
+      },
+      "orderTitle": {
+        "fontSize": 15,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          15,
+          0,
+          10
+        ]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "subject": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "italic": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "signature": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [
+          0,
+          20,
+          0,
+          5
+        ]
+      }
+    }
+  }
+}
+
