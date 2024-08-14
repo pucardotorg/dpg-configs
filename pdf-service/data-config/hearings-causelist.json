@@ -1,0 +1,226 @@
+{
+    "key": "hearings-causelist",
+    "DataConfigs": {
+      "serviceName": "rainmaker-common",
+      "version": "1.0.0",
+      "baseKeyPath": "$.hearings.*",
+      "entityIdPath":"$.id",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "topic": "common-pdf-generation-3",
+          "mappings": [
+            {
+              "direct": [
+                {
+                  "variable": "time", 
+                  "value": {
+                    "path": "$.time"
+                  }
+                },
+                {
+                  "variable": "date", 
+                  "value": {
+                    "path": "$.date"
+                  }
+                },
+                {
+                    "variable": "totalCasesListed",
+                    "value": {
+                        "path": "$.totalCasesListed"
+                    }
+                },
+                {
+                    "variable": "casesHeard",
+                    "value": {
+                        "path": "$.casesHeard"
+                    }
+                },
+                {
+                    "variable": "casesAdjourned",
+                    "value": {
+                        "path": "$.casesAdjourned"
+                    }
+                },
+                {
+                    "variable": "cases",
+                    "value": {
+                        "path": "$.cases"
+                    }
+                },
+                {
+                    "variable": "SNO",
+                    "value":{
+                        "path": "DRISHTI_SNO"
+                    },
+                    "type": "label",
+                    "localisation":{
+                    "required":true,
+                    "prefix": null,
+                    "module":"rainmaker-pdf"
+                 }
+                },
+                {
+                    "variable": "CCNO",
+                    "value":{
+                        "path": "DRISHTI_CCNO"
+                    },
+                    "type": "label",
+                    "localisation":{
+                    "required":true,
+                    "prefix": null,
+                    "module":"rainmaker-pdf"
+                 }
+                },
+                {
+                    "variable": "CaseName",
+                    "value":{
+                        "path": "DRISHTI_CASE_NAME"
+                    },
+                    "type": "label",
+                    "localisation":{
+                    "required":true,
+                    "prefix": null,
+                    "module":"rainmaker-pdf"
+                 }
+                },
+                {
+                    "variable": "AdvocateName",
+                    "value":{
+                        "path": "DRISHTI_ADVOCATE_NAME"
+                    },
+                    "type": "label",
+                    "localisation":{
+                    "required":true,
+                    "prefix": null,
+                    "module":"rainmaker-pdf"
+                 }
+                },
+                {
+                    "variable": "StageOfHearings",
+                    "value":{
+                        "path": "DRISHTI_STAGE_OF_HEARINGS"
+                    },
+                    "type": "label",
+                    "localisation":{
+                    "required":true,
+                    "prefix": null,
+                    "module":"rainmaker-pdf"
+                 }
+                },
+                {
+                    "variable": "ReasonOfHearing",
+                    "value":{
+                        "path": "DRISHTI_REASON_OF_HEARING"
+                    },
+                    "type": "label",
+                    "localisation":{
+                    "required":true,
+                    "prefix": null,
+                    "module":"rainmaker-pdf"
+                 }
+                },
+                  {
+                    "variable": "Date",
+                    "value":{
+                        "path": "DRISHTI_DATE"
+                    },
+                    "type": "label",
+                    "localisation":{
+                    "required":true,
+                    "prefix": null,
+                    "module":"rainmaker-pdf"
+                 }
+                },
+                  {
+                    "variable": "TotalCasesListed",
+                    "value":{
+                        "path": "DRISHTI_TOTAL_CASES_LISTED"
+                    },
+                    "type": "label",
+                    "localisation":{
+                    "required":true,
+                    "prefix": null,
+                    "module":"rainmaker-pdf"
+                 }
+                },
+                  {
+                    "variable": "CasesHeard",
+                    "value":{
+                        "path": "DRISHTI_CASES_HEARD"
+                    },
+                    "type": "label",
+                    "localisation":{
+                    "required":true,
+                    "prefix": null,
+                    "module":"rainmaker-pdf"
+                 }
+                },
+                  {
+                    "variable": "CasesAdjourned",
+                    "value":{
+                        "path": "DRISHTI_CASES_ADJOURNED"
+                    },
+                    "type": "label",
+                    "localisation":{
+                    "required":true,
+                    "prefix": null,
+                    "module":"rainmaker-pdf"
+                 }
+                },
+                {
+                    "variable": "TodaysCase",
+                    "value":{
+                        "path": "DRISHTI_TODAYS_CASE"
+                    },
+                    "type": "label",
+                    "localisation":{
+                    "required":true,
+                    "prefix": null,
+                    "module":"rainmaker-pdf"
+                 }
+                }
+              ]
+            },
+            {
+            "externalAPI": [
+              {
+                "path": "http://localhost:8089/egov-mdms-service/v1/_get",
+                "queryParam": "moduleName=tenant&masterName=tenants&tenantId=od&filter=%5B?(@.code=='{$.tenantId}')%5D",
+                "apiRequest": null,
+                "responseMapping": [
+                  {
+                    "variable": "address",
+                    "value": "$.MdmsRes.tenant.tenants[0].address"
+                  },
+                  {
+                    "variable": "phoneNumber",
+                    "value": "$.MdmsRes.tenant.tenants[0].contactNumber"
+                  },
+                    {
+                        "variable": "email",
+                        "value": "$.MdmsRes.tenant.tenants[0].emailId"
+                    },
+                    {
+                    "variable": "logoImage",
+                    "value": "$.MdmsRes.tenant.tenants[0].logoId",
+                    "type": "image"
+                  },
+                  {
+                    "variable": "logo-header",
+                    "value": "$.MdmsRes.tenant.tenants[0].code",
+                    "localisation": {
+                      "required": true,
+                      "prefix": "TENANT_TENANTS",
+                      "module": "rainmaker-common"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+          ]
+        }
+      ]
+    }
+  }
