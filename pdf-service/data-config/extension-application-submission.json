@@ -1,0 +1,148 @@
+{
+  "key": "extension-application-submission",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": false,
+    "mappings": [
+      {
+        "topic": "extension-application-submission-pdf-generation",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtComplex",
+                "value": {
+                  "path": "$.courtComplex"
+                }
+              },
+              {
+                "variable": "caseType",
+                "value": {
+                  "path": "$.caseType"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "courtDesignation",
+                "value": {
+                  "path": "$.courtDesignation"
+                }
+              },
+              {
+                "variable": "courtAddress",
+                "value": {
+                  "path": "$.courtAddress"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "advocateName",
+                "value": {
+                  "path": "$.advocateName"
+                }
+              },
+              {
+                "variable": "documentName",
+                "value": {
+                  "path": "$.documentName"
+                }
+              },
+              {
+                "variable": "documentId",
+                "value": {
+                  "path": "$.documentId"
+                }
+              },
+              {
+                "variable": "originalSubmissionDate",
+                "value": {
+                  "path": "$.originalSubmissionDate"
+                }
+              },
+              {
+                "variable": "requestedSubmissionDate",
+                "value": {
+                  "path": "$.requestedSubmissionDate"
+                }
+              },
+              {
+                "variable": "reasonForExtension",
+                "value": {
+                  "path": "$.reasonForExtension"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
+                }
+              },
+              {
+                "variable": "day",
+                "value": {
+                  "path": "$.day"
+                }
+              },
+              {
+                "variable": "month",
+                "value": {
+                  "path": "$.month"
+                }
+              },
+              {
+                "variable": "advocateSignature",
+                "value": {
+                  "path": "$.advocateSignature"
+                }
+              },
+              {
+                "variable": "barCouncilRegistrationNumber",
+                "value": {
+                  "path": "$.barCouncilRegistrationNumber"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+

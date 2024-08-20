@@ -1,0 +1,207 @@
+{
+  "key": "documents-production-application-evidence",
+  "config": {
+    "content": [
+      {
+        "text": "Application for Production of Documents/Evidence",
+        "style": "title"
+      },
+      {
+        "text": "IN THE COURT OF [Court Complex]",
+        "style": "header"
+      },
+      {
+        "text": "[Case Type]/Case No. [_____] of [Year]",
+        "style": "subHeader"
+      },
+      {
+        "text": "[Case Name]",
+        "style": "subHeader"
+      },
+      {
+        "text": "APPLICATION FOR PRODUCTION OF DOCUMENTS/EVIDENCE",
+        "style": "orderTitle"
+      },
+      {
+        "text": "To,",
+        "style": "bodyText"
+      },
+      {
+        "text": "The Honorable [Judge's Name/Court Designation],",
+        "style": "bodyText"
+      },
+      {
+        "text": "[Address of the Court]",
+        "style": "bodyText"
+      },
+      {
+        "text": "[Date]",
+        "style": "date"
+      },
+      {
+        "text": "Subject: Application for Production of Documents/Evidence",
+        "style": "subject"
+      },
+      {
+        "text": "[Complainant Name], represented by Advocate [Advocate Name], respectfully submits as follows:",
+        "style": "bodyText"
+      },
+      {
+        "text": "This application seeks permission to produce additional documents/evidence pertinent to the above-mentioned case.",
+        "style": "bodyText"
+      },
+      {
+        "text": "These documents are as follows:",
+        "style": "bodyText"
+      },
+      {
+        "text": "[Name of Documents]",
+        "style": "documentList"
+      },
+      {
+        "text": "The petitioner believes that the production of the aforementioned documents/evidence is crucial for a fair and just adjudication of the present case. These documents/evidence are essential to [Reason for Submission of Documents].",
+        "style": "bodyText"
+      },
+      {
+        "text": "The petitioner assures and undertakes to the Hon'ble Court that this request is made in good faith and will not prejudice the other party.",
+        "style": "bodyText"
+      },
+      {
+        "text": "Therefore, the petitioner humbly requests the Hon'ble Court to consider this application and grant permission to produce the aforementioned documents/evidence.",
+        "style": "bodyText"
+      },
+      {
+        "text": "[Additional Comments]",
+        "style": "additionalComments"
+      },
+      {
+        "text": "Dated this [Date] day of [Month], [Year].",
+        "style": "date"
+      },
+      {
+        "text": "[Advocate Signature]",
+        "style": "signature"
+      },
+      {
+        "text": "[Advocate Name]",
+        "style": "signature"
+      },
+      {
+        "text": "[Bar Council Registration Number]",
+        "style": "signature"
+      },
+      {
+        "text": "Advocate for [Party Name]",
+        "style": "signature"
+      }
+    ],
+    "styles": {
+      "title": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          0,
+          0,
+          20
+        ]
+      },
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          10,
+          0,
+          0
+        ]
+      },
+      "subHeader": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          5,
+          0,
+          5
+        ]
+      },
+      "orderTitle": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "subject": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "documentList": {
+        "fontSize": 11,
+        "bold": true,
+        "margin": [
+          20,
+          5,
+          0,
+          10
+        ]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "italic": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "signature": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [
+          0,
+          20,
+          0,
+          5
+        ]
+      }
+    }
+  }
+}
