@@ -1,5 +1,5 @@
 {
-  "key": "application-bail-bond",
+  "key": "application-generic",
   "config": {
     "content": [
       {
@@ -22,7 +22,7 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "APPLICATION FOR BAIL - Bail bond",
+                    "text": "{{applicationName}}",
                     "style": "applicationTitle"
                   },
                   {
@@ -42,58 +42,11 @@
                     "style": "date"
                   },
                   {
-                    "text": "Subject: Application for Bail - Bail bond",
+                    "text": "Subject: {{applicationName}}",
                     "style": "subjectText"
                   },
                   {
-                    "text": "{{partyName}}, represented by Advocate {{advocateName}}, respectfully submits as follows:",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "Brief Summary of the Circumstances Leading to the Bail Application: The applicant has been accused under {{statuteAndAct}}.",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "List of Attached Documents:",
-                    "style": "bodyText"
-                  },
-                  "{{#documentNameList}}",
-                  {
-                    "table": {
-                      "widths": [150, "*"],
-                      "body": [
-                        {
-                          "text": "{{documentName}}",
-                          "style": "tableData"
-                        }
-                      ],
-                      "border": [true, true, true, true]
-                    }
-                  },
-                  {
-                    "text": "",
-                    "margin": [0, 0, 0, 20]
-                  },
-                  "{{/documentNameList}}",
-                  {
-                    "text": "The following documents are attached in support of this bail application:",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "The applicant believes that the grant of bail is justified in this case for the following reasons:",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "{{reasonForApplication}}",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "The applicant assures and undertakes to the Hon'ble Court that this request is made in good faith and that the applicant will abide by all conditions imposed by the Court. The applicant also undertakes to appear before the Court as and when required.",
-                    "style": "bodyText"
-                  },
-
-                  {
-                    "text": "Therefore, the applicant humbly requests the Hon'ble Court to consider this application and grant bail on such terms and conditions as the Court may deem fit and proper.",
+                    "text": "My client, {{partyName}}, the {{complainantName}}, hereby submits this application before this Honorable Court seeking {{purposeOfApplication}}",
                     "style": "bodyText"
                   },
                   {
@@ -101,8 +54,16 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Dated this {{day}} day of {{month}}, {{year}}.",
-                    "style": "date"
+                    "text": "Prayer: [If Prayer field is filled]",
+                    "style": "subjectText"
+                  },
+                  {
+                    "text": "{{prayerOptional}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "I remain available to provide any further information or clarification that the Court may require.",
+                    "style": "bodyText"
                   },
                   {
                     "text": "{{advocateSignature}}",
@@ -182,11 +143,6 @@
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, -10, 0, 10]
-      },
-      "tableData": {
-        "bold": true,
-        "fontSize": 10,
-        "color": "black"
       }
     }
   }
