@@ -57,6 +57,24 @@
                     "text": "List of Attached Documents:",
                     "style": "bodyText"
                   },
+                  "{{#documentNameList}}",
+                  {
+                    "table": {
+                      "widths": [150, "*"],
+                      "body": [
+                        {
+                          "text": "{{documentName}}",
+                          "style": "tableData"
+                        }
+                      ],
+                      "border": [true, true, true, true]
+                    }
+                  },
+                  {
+                    "text": "",
+                    "margin": [0, 0, 0, 20]
+                  },
+                  "{{/documentNameList}}",
                   {
                     "text": "The following documents are attached in support of this bail application:",
                     "style": "bodyText"
@@ -164,6 +182,11 @@
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, -10, 0, 10]
+      },
+      "tableData": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black"
       }
     }
   }
