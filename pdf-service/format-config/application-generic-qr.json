@@ -1,5 +1,5 @@
 {
-  "key": "application-submission-extension",
+  "key": "application-generic",
   "config": {
     "content": [
       {
@@ -22,7 +22,7 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "APPLICATION FOR EXTENSION OF SUBMISSION DEADLINE",
+                    "text": "{{applicationName}}",
                     "style": "applicationTitle"
                   },
                   {
@@ -42,40 +42,28 @@
                     "style": "date"
                   },
                   {
-                    "text": "Subject: Application for extension of submission timelines",
+                    "text": "Subject: {{applicationName}}",
                     "style": "subjectText"
                   },
                   {
-                    "text": "{{partyName}}, herein referred to as the applicant, represented by Advocate {{advocateName}}, respectfully submits as follows:",
+                    "text": "My client, {{partyName}}, the {{complainantName}}, hereby submits this application before this Honorable Court seeking {{purposeOfApplication}}",
                     "style": "bodyText"
                   },
                   {
-                    "text": "This Application seeks an extension of the deadline for submission of {{documentSubmissionName}} in the above-mentioned case. The details of the extension request are set out below:",
+                    "text": "{{additionalComments}}",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Original submission date: {{originalSubmissionDate}}",
+                    "text": "Prayer: [If Prayer field is filled]",
+                    "style": "subjectText"
+                  },
+                  {
+                    "text": "{{prayerOptional}}",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Extension date: {{requestedSubmissionDate}}",
+                    "text": "I remain available to provide any further information or clarification that the Court may require.",
                     "style": "bodyText"
-                  },
-                  {
-                    "text": "Reason for extension: {{extensionReason}}",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "The Applicant assures and undertakes that the Hon'ble Court that this request is not made lightly and will not prejudice the other party.",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "Therefore, the Applicant humbly requests the Hon'ble Court to consider this application and pray the court to grant the requested extension above mentioned.",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "Dated this {{day}} day of {{month}}, {{year}}.",
-                    "style": "date"
                   },
                   {
                     "text": "{{advocateSignature}}",
@@ -96,6 +84,23 @@
                 ],
                 "alignment": "left",
                 "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
               }
             ]
           ]
@@ -155,6 +160,11 @@
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, -10, 0, 10]
+      },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
       }
     }
   }
