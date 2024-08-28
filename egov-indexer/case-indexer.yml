@@ -133,8 +133,6 @@ ServiceMaps:
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.caseDetails.id
-              - inJsonPath: $.tenantId
-                outJsonPath: $.Data.caseDetails.tenantId
               - inJsonPath: $.resolutionMechanism
                 outJsonPath: $.Data.caseDetails.resolutionMechanism
               - inJsonPath: $.caseTitle

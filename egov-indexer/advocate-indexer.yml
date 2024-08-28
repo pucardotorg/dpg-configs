@@ -161,8 +161,6 @@ ServiceMaps:
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.advocateDetails.id
-              - inJsonPath: $.tenantId
-                outJsonPath: $.Data.advocateDetails.tenantId
               - inJsonPath: $.applicationNumber
                 outJsonPath: $.Data.advocateDetails.applicationNumber
               - inJsonPath: $.barRegistrationNumber

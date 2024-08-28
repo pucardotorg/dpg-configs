@@ -92,10 +92,9 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: order
       queryMaps:
-        - query: UPDATE dristi_orders SET tenantid=?, filingnumber=?, hearingnumber=?, linkedordernumber=?, ordercategory=?, createddate=?, applicationnumber=?, ordertype=?, ordernumber=?, cnrnumber=?, comments=?, status=?, isactive=?, orderdetails=?, issuedBy=?, additionaldetails=?, lastmodifiedby=?, lastModifiedTime=? WHERE id=?;
+        - query: UPDATE dristi_orders SET filingnumber=?, hearingnumber=?, linkedordernumber=?, ordercategory=?, createddate=?, applicationnumber=?, ordertype=?, ordernumber=?, cnrnumber=?, comments=?, status=?, isactive=?, orderdetails=?, issuedBy=?, additionaldetails=?, lastmodifiedby=?, lastModifiedTime=? WHERE id=?;
           basePath: order
           jsonMaps:
-            - jsonPath: $.order.tenantId
             - jsonPath: $.order.filingNumber
             - jsonPath: $.order.hearingNumber
             - jsonPath: $.order.linkedOrderNumber
@@ -123,7 +122,7 @@ serviceMaps:
             - jsonPath: $.order.auditDetails.lastModifiedTime
             - jsonPath: $.order.id
 
-        - query: INSERT INTO dristi_order_statute_section(id, tenantId, statute, sections, subsections, strsections, strsubsections, order_id, additionalDetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, statute = EXCLUDED.statute, sections = EXCLUDED.sections, subsections = EXCLUDED.subsections, strsections = EXCLUDED.strsections, order_id = EXCLUDED.order_id, strsubsections = EXCLUDED.strsubsections,  additionalDetails = EXCLUDED.additionalDetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime, createdtime = EXCLUDED.createdtime, createdBy = EXCLUDED.createdBy;
+        - query: INSERT INTO dristi_order_statute_section(id, tenantId, statute, sections, subsections, strsections, strsubsections, order_id, additionalDetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET statute = EXCLUDED.statute, sections = EXCLUDED.sections, subsections = EXCLUDED.subsections, strsections = EXCLUDED.strsections, order_id = EXCLUDED.order_id, strsubsections = EXCLUDED.strsubsections,  additionalDetails = EXCLUDED.additionalDetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime, createdtime = EXCLUDED.createdtime, createdBy = EXCLUDED.createdBy;
           basePath: order.statuteSection
           jsonMaps:
             - jsonPath: $.order.statuteSection.id

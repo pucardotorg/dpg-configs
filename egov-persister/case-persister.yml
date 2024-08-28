@@ -192,10 +192,9 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: cases
       queryMaps:
-        - query: UPDATE dristi_cases SET tenantid=?,resolutionmechanism=?,casetitle=?,casedescription=?,filingnumber=?,casenumber=?,cnrnumber=?,courtcasenumber=?,accesscode=?,isactive=?,courtid=?,benchid=?,judgeid=?,filingdate=?,judgementdate=?,registrationdate=?,casecategory=?,natureofpleading=?,status=?,remarks=?,casedetails=?,additionaldetails=?,lastmodifiedby=?,lastModifiedtime=? WHERE id=?;
+        - query: UPDATE dristi_cases SET resolutionmechanism=?,casetitle=?,casedescription=?,filingnumber=?,casenumber=?,cnrnumber=?,courtcasenumber=?,accesscode=?,isactive=?,courtid=?,benchid=?,judgeid=?,filingdate=?,judgementdate=?,registrationdate=?,casecategory=?,natureofpleading=?,status=?,remarks=?,casedetails=?,additionaldetails=?,lastmodifiedby=?,lastModifiedtime=? WHERE id=?;
           basePath: cases
           jsonMaps:
-            - jsonPath: $.cases.tenantId
             - jsonPath: $.cases.resolutionMechanism
             - jsonPath: $.cases.caseTitle
             - jsonPath: $.cases.caseDescription
@@ -277,7 +276,7 @@ serviceMaps:
             - jsonPath: $.cases.litigants.*.auditDetails.createdTime
             - jsonPath: $.cases.litigants.*.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO dristi_case_representatives (id, tenantid, advocateid, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, advocateid = EXCLUDED.advocateid, isactive = EXCLUDED.isactive, case_id = EXCLUDED.case_id, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
+        - query: INSERT INTO dristi_case_representatives (id, tenantid, advocateid, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET advocateid = EXCLUDED.advocateid, isactive = EXCLUDED.isactive, case_id = EXCLUDED.case_id, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
           basePath: cases.representatives.*
           jsonMaps:
             - jsonPath: $.cases.representatives.*.id
