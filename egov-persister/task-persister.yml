@@ -79,10 +79,9 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: task
       queryMaps:
-        - query: UPDATE dristi_task SET tenantId=?, orderId=?, filingNumber=?, cnrNumber=?, taskNumber=?, createdDate=?, dateCloseBy=?, dateClosed=?, taskDescription=?, taskType=?, taskDetails=?, status=?, assignedTo=?, isActive=?, additionalDetails=?, lastModifiedBy=?, lastModifiedTime=? WHERE id=?;
+        - query: UPDATE dristi_task SET orderId=?, filingNumber=?, cnrNumber=?, taskNumber=?, createdDate=?, dateCloseBy=?, dateClosed=?, taskDescription=?, taskType=?, taskDetails=?, status=?, assignedTo=?, isActive=?, additionalDetails=?, lastModifiedBy=?, lastModifiedTime=? WHERE id=?;
           basePath: task
           jsonMaps:
-            - jsonPath: $.task.tenantId
             - jsonPath: $.task.orderId
             - jsonPath: $.task.filingNumber
             - jsonPath: $.task.cnrNumber

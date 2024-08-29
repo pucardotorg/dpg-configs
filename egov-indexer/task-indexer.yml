@@ -115,8 +115,6 @@ ServiceMaps:
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.taskDetails.id
-              - inJsonPath: $.tenantId
-                outJsonPath: $.Data.taskDetails.tenantId
               - inJsonPath: $.orderId
                 outJsonPath: $.Data.taskDetails.orderId
               - inJsonPath: $.createdDate

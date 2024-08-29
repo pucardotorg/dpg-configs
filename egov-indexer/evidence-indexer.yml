@@ -94,8 +94,6 @@ ServiceMaps:
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.artifactDetails.id
-              - inJsonPath: $.tenantId
-                outJsonPath: $.Data.artifactDetails.tenantId
               - inJsonPath: $.artifactNumber
                 outJsonPath: $.Data.artifactDetails.artifactNumber
               - inJsonPath: $.evidenceNumber

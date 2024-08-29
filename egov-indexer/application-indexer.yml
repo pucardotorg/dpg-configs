@@ -80,8 +80,6 @@ ServiceMaps:
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.applicationDetails.id
-              - inJsonPath: $.tenantId
-                outJsonPath: $.Data.applicationDetails.tenantId
               - inJsonPath: $.caseId
                 outJsonPath: $.Data.applicationDetails.caseId
               - inJsonPath: $.filingNumber
