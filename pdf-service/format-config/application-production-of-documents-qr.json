@@ -1,5 +1,5 @@
 {
-  "key": "application-submission-extension",
+  "key": "application-production-of-documents",
   "config": {
     "content": [
       {
@@ -22,7 +22,7 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "APPLICATION FOR EXTENSION OF SUBMISSION DEADLINE",
+                    "text": "APPLICATION FOR PRODUCTION OF DOCUMENTS/EVIDENCE",
                     "style": "applicationTitle"
                   },
                   {
@@ -42,35 +42,39 @@
                     "style": "date"
                   },
                   {
-                    "text": "Subject: Application for extension of submission timelines",
+                    "text": "Subject: Application for Production of Documents/Evidence",
                     "style": "subjectText"
                   },
                   {
-                    "text": "{{partyName}}, herein referred to as the applicant, represented by Advocate {{advocateName}}, respectfully submits as follows:",
+                    "text": "{{partyName}}, represented by Advocate {{advocateName}}, respectfully submits as follows:",
                     "style": "bodyText"
                   },
                   {
-                    "text": "This Application seeks an extension of the deadline for submission of {{documentSubmissionName}} in the above-mentioned case. The details of the extension request are set out below:",
+                    "text": "This application seeks permission to produce additional documents/evidence pertinent to the above-mentioned case.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Original submission date: {{originalSubmissionDate}}",
+                    "text": "These documents are as follows:",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Extension date: {{requestedSubmissionDate}}",
+                    "text": "{{nameOfDocument}}",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Reason for extension: {{extensionReason}}",
+                    "text": "The petitioner believes that the production of the aforementioned documents/evidence is crucial for a fair and just adjudication of the present case. These documents/evidence are essential to {{reasonForApplication}}.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "The Applicant assures and undertakes that the Hon'ble Court that this request is not made lightly and will not prejudice the other party.",
+                    "text": "The petitioner assures and undertakes to the Hon'ble Court that this request is made in good faith and will not prejudice the other party.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Therefore, the Applicant humbly requests the Hon'ble Court to consider this application and pray the court to grant the requested extension above mentioned.",
+                    "text": "Therefore, the petitioner humbly requests the Hon'ble Court to consider this petition and grant the transfer of the aforementioned criminal complaint from {{originalCourt}} to {{newCourt}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
                     "style": "bodyText"
                   },
                   {
@@ -96,6 +100,23 @@
                 ],
                 "alignment": "left",
                 "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
               }
             ]
           ]
@@ -155,6 +176,11 @@
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, -10, 0, 10]
+      },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
       }
     }
   }

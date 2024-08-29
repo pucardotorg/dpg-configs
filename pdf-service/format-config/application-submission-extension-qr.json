@@ -1,5 +1,5 @@
 {
-  "key": "application-submission-extension",
+  "key": "application-submission-extension-qr",
   "config": {
     "content": [
       {
@@ -101,6 +101,23 @@
           ]
         },
         "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
       }
     ],
     "styles": {
@@ -155,6 +172,11 @@
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, -10, 0, 10]
+      },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
       }
     }
   }

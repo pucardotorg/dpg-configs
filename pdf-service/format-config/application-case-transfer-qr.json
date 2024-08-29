@@ -1,5 +1,5 @@
 {
-  "key": "application-submission-extension",
+  "key": "application-case-transfer",
   "config": {
     "content": [
       {
@@ -22,7 +22,11 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "APPLICATION FOR EXTENSION OF SUBMISSION DEADLINE",
+                    "text": "TRANSFER PETITION SEEKING TRANSFER OF CRIMINAL COMPLAINT BEARING",
+                    "style": "applicationTitle"
+                  },
+                  {
+                    "text": "NO. {{caseNo}} FROM {{originalCourt}} TO {{newCourt}}",
                     "style": "applicationTitle"
                   },
                   {
@@ -42,39 +46,55 @@
                     "style": "date"
                   },
                   {
-                    "text": "Subject: Application for extension of submission timelines",
+                    "text": "Subject: Transfer Petition Seeking Transfer of Criminal Complaint Bearing No. {{caseNo}} from {{originalCourt}} to {{newCourt}}",
                     "style": "subjectText"
                   },
                   {
-                    "text": "{{partyName}}, herein referred to as the applicant, represented by Advocate {{advocateName}}, respectfully submits as follows:",
+                    "text": "{{partyName}},  herein referred to as the petitioner, represented by Advocate {{advocateName}}, respectfully submits as follows:",
                     "style": "bodyText"
                   },
                   {
-                    "text": "This Application seeks an extension of the deadline for submission of {{documentSubmissionName}} in the above-mentioned case. The details of the extension request are set out below:",
+                    "text": "This petition seeks the transfer of the criminal complaint bearing No. {{caseNo}} from {{originalCourt}} to {{newCourt}}.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Original submission date: {{originalSubmissionDate}}",
+                    "text": "{{additionalComments}}",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Extension date: {{requestedSubmissionDate}}",
+                    "text": "Grounds:",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Reason for extension: {{extensionReason}}",
+                    "text": "{{grounds}}",
                     "style": "bodyText"
                   },
                   {
-                    "text": "The Applicant assures and undertakes that the Hon'ble Court that this request is not made lightly and will not prejudice the other party.",
+                    "text": "The petitioner assures and undertakes to the Hon'ble Court that this request is made in good faith and will not prejudice the other party.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Therefore, the Applicant humbly requests the Hon'ble Court to consider this application and pray the court to grant the requested extension above mentioned.",
+                    "text": "Therefore, the petitioner humbly requests the Hon'ble Court to consider this petition and grant the transfer of the aforementioned criminal complaint from {{originalCourt}} to {{newCourt}}.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Dated this {{day}} day of {{month}}, {{year}}.",
+                    "text": "Prayer:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{reliefSought}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Verification:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "I, {{partyName}}, do hereby verify that the contents are correct and true to the best of my knowledge and personal belief and no part of it is false and nothing material has been concealed therein.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Affirmed on this {{day}} day of {{month}}, {{year}}.",
                     "style": "date"
                   },
                   {
@@ -96,6 +116,23 @@
                 ],
                 "alignment": "left",
                 "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
               }
             ]
           ]
@@ -155,6 +192,11 @@
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, -10, 0, 10]
+      },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
       }
     }
   }
