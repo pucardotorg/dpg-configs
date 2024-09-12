@@ -4,6 +4,7 @@ serviceMaps:
     - version: 1.0
       description: Persists artifact details in tables
       fromTopic: save-artifact-application
+      objecIdJsonPath: $.id
       isTransaction: true
       queryMaps:
 
@@ -101,7 +102,7 @@ serviceMaps:
       fromTopic: update-evidence-comments
       isTransaction: true
       isAuditEnabled: true
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.artifactNumber
       auditAttributeBasePath: $
