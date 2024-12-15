@@ -1,0 +1,118 @@
+{
+  "key": "case-settlement-application",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": false,
+    "mappings": [
+      {
+        "topic": "case-settlement-application-pdf-generation",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "caseNameAndNumber",
+                "value": {
+                  "path": "$.caseNameAndNumber"
+                }
+              },
+              {
+                "variable": "applicationNo",
+                "value": {
+                  "path": "$.applicationNo"
+                }
+              },
+              {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "dateOfSettlementAgreement",
+                "value": {
+                  "path": "$.dateOfSettlementAgreement"
+                }
+              },
+              {
+                "variable": "settlementMechanism",
+                "value": {
+                  "path": "$.settlementMechanism"
+                }
+              },
+              {
+                "variable": "hasSettlementBeenImplemented",
+                "value": {
+                  "path": "$.hasSettlementBeenImplemented"
+                }
+              },
+              {
+                "variable": "additionalInformation",
+                "value": {
+                  "path": "$.additionalInformation"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "location",
+                "value": {
+                  "path": "$.location"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "month",
+                "value": {
+                  "path": "$.month"
+                }
+              },
+              {
+                "variable": "signature",
+                "value": {
+                  "path": "$.signature"
+                }
+              },
+              {
+                "variable": "advocateName",
+                "value": {
+                  "path": "$.advocateName"
+                }
+              },
+              {
+                "variable": "barCouncilRegistrationNumber",
+                "value": {
+                  "path": "$.barCouncilRegistrationNumber"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,207 @@
+{
+  "key": "withdrawal-petition",
+  "config": {
+    "content": [
+      {
+        "text": "APPLICATION FOR WITHDRAWAL OF CASE",
+        "style": "title"
+      },
+      {
+        "text": "IN THE COURT OF [Court Complex]",
+        "style": "header"
+      },
+      {
+        "text": "[Case Type]/Case No. [_____] of [Year]",
+        "style": "subHeader"
+      },
+      {
+        "text": "[Case Name]",
+        "style": "subHeader"
+      },
+      {
+        "text": "APPLICATION FOR WITHDRAWAL OF CASE",
+        "style": "orderTitle"
+      },
+      {
+        "text": "To,",
+        "style": "bodyText"
+      },
+      {
+        "text": "The Honorable [Judge's Name/Court Designation],",
+        "style": "bodyText"
+      },
+      {
+        "text": "[Address of the Court]",
+        "style": "bodyText"
+      },
+      {
+        "text": "[Date]",
+        "style": "date"
+      },
+      {
+        "text": "Subject: Application for Withdrawal of Case",
+        "style": "subject"
+      },
+      {
+        "text": "My client, [Party Name], [the Defendant/Complainant], hereby submits this application before this Honorable Court seeking withdrawal of the case of [Case Name and Number].",
+        "style": "bodyText"
+      },
+      {
+        "text": "The reasons for the withdrawal of the case are detailed below:",
+        "style": "sectionHeader"
+      },
+      {
+        "text": "[Clearly state the reasons for requesting the withdrawal of the case. For example, the dispute may have been resolved outside of court, there may be a lack of evidence, or the petitioner may no longer wish to pursue the matter.]",
+        "style": "bodyText"
+      },
+      {
+        "text": "I respectfully request this Honorable Court to grant permission for the withdrawal of the case and to pass appropriate orders in this regard.",
+        "style": "bodyText"
+      },
+      {
+        "text": "[Additional Comments]",
+        "style": "additionalComments"
+      },
+      {
+        "text": "Thank you for your consideration of this petition.",
+        "style": "closingText"
+      },
+      {
+        "text": "[Signature]",
+        "style": "signature"
+      },
+      {
+        "text": "[Advocate Name]",
+        "style": "signature"
+      },
+      {
+        "text": "[Bar Council Registration Number]",
+        "style": "signature"
+      },
+      {
+        "text": "Advocate for [Party Name]",
+        "style": "signature"
+      }
+    ],
+    "styles": {
+      "title": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          0,
+          0,
+          20
+        ]
+      },
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          10,
+          0,
+          0
+        ]
+      },
+      "subHeader": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          5,
+          0,
+          5
+        ]
+      },
+      "orderTitle": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "subject": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "sectionHeader": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          15,
+          0,
+          5
+        ]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "italic": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "closingText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "signature": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [
+          0,
+          20,
+          0,
+          5
+        ]
+      }
+    }
+  }
+}
+

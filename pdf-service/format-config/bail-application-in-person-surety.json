@@ -1,0 +1,206 @@
+{
+  "key": "bail-application-in-person-surety",
+  "config": {
+    "content": [
+      {
+        "stack": [
+          {
+            "text": "IN THE COURT OF {{courtComplex}}",
+            "style": "header"
+          },
+          {
+            "text": "{{caseType}}/Case No. {{caseNo}} of {{year}}",
+            "style": "subHeader"
+          },
+          {
+            "text": "{{caseName}}",
+            "style": "subHeader"
+          },
+          {
+            "text": "APPLICATION FOR BAIL - In Person Surety",
+            "style": "orderTitle"
+          }
+        ]
+      },
+      {
+        "text": "To,",
+        "style": "bodyText"
+      },
+      {
+        "text": "The Honorable {{judgeNameOrDesignation}},",
+        "style": "bodyText"
+      },
+      {
+        "text": "{{courtAddress}}",
+        "style": "bodyText"
+      },
+      {
+        "text": "{{date}}",
+        "style": "date"
+      },
+      {
+        "text": "Subject: Application for Bail - In person surety",
+        "style": "subject"
+      },
+      {
+        "text": "{{applicantName}}, represented by Advocate {{advocateName}}, respectfully submits as follows:",
+        "style": "bodyText"
+      },
+      {
+        "text": "Brief Summary of the Circumstances Leading to the Bail Application:",
+        "style": "sectionHeader"
+      },
+      {
+        "text": "The applicant has been accused under {{statuteAndAct}}.",
+        "style": "bodyText"
+      },
+      {
+        "text": "List of Attached Documents:",
+        "style": "sectionHeader"
+      },
+      {
+        "text": "{{attachedDocuments}}",
+        "style": "bodyText"
+      },
+      {
+        "text": "The applicant believes that the grant of bail is justified in this case for the following reasons:",
+        "style": "sectionHeader"
+      },
+      {
+        "text": "{{reasonForApplicationOfBail}}",
+        "style": "bodyText"
+      },
+      {
+        "text": "The applicant assures and undertakes to the Hon'ble Court that this request is made in good faith and that the applicant will abide by all conditions imposed by the Court. The applicant also undertakes to appear before the Court as and when required.",
+        "style": "bodyText"
+      },
+      {
+        "text": "Therefore, the applicant humbly requests the Hon'ble Court to consider this application and grant bail on such terms and conditions as the Court may deem fit and proper.",
+        "style": "bodyText"
+      },
+      {
+        "text": "{{additionalComments}}",
+        "style": "additionalComments"
+      },
+      {
+        "text": "Dated this {{date}} day of {{month}}, {{year}}.",
+        "style": "date"
+      },
+      {
+        "text": "{{advocateSignature}}",
+        "style": "signature"
+      },
+      {
+        "text": "{{advocateName}}",
+        "style": "signature"
+      },
+      {
+        "text": "{{barCouncilRegistrationNumber}}",
+        "style": "signature"
+      },
+      {
+        "text": "Advocate for {{applicantName}}",
+        "style": "signature"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          20,
+          0,
+          0
+        ]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          5,
+          0,
+          0
+        ]
+      },
+      "orderTitle": {
+        "fontSize": 15,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          15,
+          0,
+          10
+        ]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "subject": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "sectionHeader": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          15,
+          0,
+          5
+        ]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "italic": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "signature": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [
+          0,
+          20,
+          0,
+          5
+        ]
+      }
+    }
+  }
+}
+

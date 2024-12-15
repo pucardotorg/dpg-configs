@@ -1,0 +1,136 @@
+{
+  "key": "bail-application",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": false,
+    "mappings": [
+      {
+        "topic": "bail-application-pdf-generation",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "Court Complex",
+                "value": {
+                  "path": "$.courtComplex"
+                }
+              },
+              {
+                "variable": "Case Type",
+                "value": {
+                  "path": "$.caseType"
+                }
+              },
+              {
+                "variable": "Case No.",
+                "value": {
+                  "path": "$.caseNo"
+                }
+              },
+              {
+                "variable": "Year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
+              {
+                "variable": "Case Name",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "Judge's Name/Court Designation",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "Address of the Court",
+                "value": {
+                  "path": "$.courtAddress"
+                }
+              },
+              {
+                "variable": "Date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "Applicant Name",
+                "value": {
+                  "path": "$.applicantName"
+                }
+              },
+              {
+                "variable": "Advocate Name",
+                "value": {
+                  "path": "$.advocateName"
+                }
+              },
+              {
+                "variable": "Briefly describe statute and act",
+                "value": {
+                  "path": "$.statuteAndAct"
+                }
+              },
+              {
+                "variable": "Document 1",
+                "value": {
+                  "path": "$.document1"
+                }
+              },
+              {
+                "variable": "Document 2",
+                "value": {
+                  "path": "$.document2"
+                }
+              },
+              {
+                "variable": "Document 3",
+                "value": {
+                  "path": "$.document3"
+                }
+              },
+              {
+                "variable": "Reason for Application of Bail",
+                "value": {
+                  "path": "$.bailReason"
+                }
+              },
+              {
+                "variable": "Any additional comments",
+                "value": {
+                  "path": "$.additionalComments"
+                }
+              },
+              {
+                "variable": "Month",
+                "value": {
+                  "path": "$.month"
+                }
+              },
+              {
+                "variable": "Advocate Signature",
+                "value": {
+                  "path": "$.advocateSignature"
+                }
+              },
+              {
+                "variable": "Bar Council Registration Number",
+                "value": {
+                  "path": "$.barCouncilRegNo"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+

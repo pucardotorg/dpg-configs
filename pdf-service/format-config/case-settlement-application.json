@@ -1,0 +1,150 @@
+{
+  "key": "case-settlement-application",
+  "config": {
+    "content": [
+      {
+        "stack": [
+          {
+            "text": "IN THE COURT OF {{courtName}}",
+            "style": "header"
+          },
+          {
+            "text": "{{caseNameAndNumber}}",
+            "style": "subHeader"
+          },
+          {
+            "text": "Application No. {{applicationNo}} of {{year}}",
+            "style": "subHeader"
+          },
+          {
+            "text": "Subject: Application for Settlement of Case",
+            "style": "orderTitle"
+          }
+        ]
+      },
+      {
+        "text": "My client, {{partyName}}, [the Defendant/Complainant], hereby submits this application before this Honorable Court to request approval of a settlement agreement reached between the parties.",
+        "style": "bodyText"
+      },
+      {
+        "text": "The parties have engaged in discussions and have reached a mutually agreeable settlement, which they believe serves the best interests of both parties and obviates the need for prolonged litigation. The settlement agreement was finalized on {{dateOfSettlementAgreement}}.",
+        "style": "bodyText"
+      },
+      {
+        "text": "Settlement Mechanism: {{settlementMechanism}}",
+        "style": "bodyText"
+      },
+      {
+        "text": "Has the Settlement already been implemented here: {{hasSettlementBeenImplemented}}",
+        "style": "bodyText"
+      },
+      {
+        "text": "{{additionalInformation}}",
+        "style": "bodyText"
+      },
+      {
+        "text": "Prayer:",
+        "style": "orderText"
+      },
+      {
+        "ul": [
+          "Approve the settlement agreement attached herewith.",
+          "Dismiss the case, {{caseName}}, Case Number {{caseNumber}}, with prejudice.",
+          "Allow both parties to bear their own costs and attorney’s fees as specified in the settlement agreement."
+        ],
+        "style": "bodyText"
+      },
+      {
+        "text": "Verification:",
+        "style": "orderText"
+      },
+      {
+        "text": "I, {{partyName}}, do hereby verify that the contents above are correct and true to the best of my knowledge and personal belief and no part of it is false and nothing material has been concealed therein.",
+        "style": "bodyText"
+      },
+      {
+        "text": "Affirmed at {{location}} on this {{date}} day of {{month}}, {{year}}.",
+        "style": "bodyText"
+      },
+      {
+        "text": "{{signature}}",
+        "style": "signature"
+      },
+      {
+        "text": "{{advocateName}}",
+        "style": "signature"
+      },
+      {
+        "text": "Bar Council Registration Number: {{barCouncilRegistrationNumber}}",
+        "style": "signature"
+      },
+      {
+        "text": "Advocate for {{partyName}}",
+        "style": "signature"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          20,
+          0,
+          0
+        ]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          5,
+          0,
+          0
+        ]
+      },
+      "orderTitle": {
+        "fontSize": 15,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          15,
+          0,
+          10
+        ]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  }
+}

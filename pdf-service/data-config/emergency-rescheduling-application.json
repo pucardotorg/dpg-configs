@@ -1,0 +1,124 @@
+{
+  "key": "emergency-rescheduling-application",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": false,
+    "mappings": [
+      {
+        "topic": "rescheduling-application-pdf-generation",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtComplex",
+                "value": {
+                  "path": "$.courtComplex"
+                }
+              },
+              {
+                "variable": "caseType",
+                "value": {
+                  "path": "$.caseType"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "judgeNameOrDesignation",
+                "value": {
+                  "path": "$.judgeNameOrDesignation"
+                }
+              },
+              {
+                "variable": "courtAddress",
+                "value": {
+                  "path": "$.courtAddress"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "role",
+                "value": {
+                  "path": "$.role"
+                }
+              },
+              {
+                "variable": "initialHearingDate",
+                "value": {
+                  "path": "$.initialHearingDate"
+                }
+              },
+              {
+                "variable": "reasonForRescheduling",
+                "value": {
+                  "path": "$.reasonForRescheduling"
+                }
+              },
+              {
+                "variable": "rescheduleDates",
+                "value": {
+                  "path": "$.rescheduleDates"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
+                }
+              },
+              {
+                "variable": "advocateSignature",
+                "value": {
+                  "path": "$.advocateSignature"
+                }
+              },
+              {
+                "variable": "advocateName",
+                "value": {
+                  "path": "$.advocateName"
+                }
+              },
+              {
+                "variable": "barCouncilRegistrationNumber",
+                "value": {
+                  "path": "$.barCouncilRegistrationNumber"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+

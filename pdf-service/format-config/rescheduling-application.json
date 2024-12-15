@@ -1,0 +1,177 @@
+{
+  "key": "rescheduling-application",
+  "config": {
+    "content": [
+      {
+        "text": "Rescheduling Application",
+        "style": "title"
+      },
+      {
+        "text": "IN THE COURT OF [Court Complex]",
+        "style": "header"
+      },
+      {
+        "text": "[Case Type]/Case No. [_____]/[Year]",
+        "style": "subHeader"
+      },
+      {
+        "text": "[Case Name]",
+        "style": "subHeader"
+      },
+      {
+        "text": "APPLICATION FOR RESCHEDULING OF HEARING DATE",
+        "style": "orderTitle"
+      },
+      {
+        "text": "To,",
+        "style": "bodyText"
+      },
+      {
+        "text": "The Honorable [Judge's Name/Court Designation],",
+        "style": "bodyText"
+      },
+      {
+        "text": "[Address of the Court]",
+        "style": "bodyText"
+      },
+      {
+        "text": "[Date]",
+        "style": "date"
+      },
+      {
+        "text": "Subject: Application for Rescheduling of Hearing Date",
+        "style": "subject"
+      },
+      {
+        "text": "My client, [Party Name], the [Petitioner/Complainant/Accused], hereby submits this application before this Honorable Court seeking to reschedule the hearing date in the matter of [Case Name and Number].",
+        "style": "bodyText"
+      },
+      {
+        "text": "The case was originally posted for hearing on [Initial Hearing Date]. However, due to [Reason for Rescheduling], attending the hearing will not be possible. My client and I will make ourselves available for the same for all dates after [Dates from which the hearing can be rescheduled].",
+        "style": "bodyText"
+      },
+      {
+        "text": "I respectfully request the Court's consideration to reschedule the hearing date. Thank you for considering this request. I remain available to provide any further information or clarification that the Court may require.",
+        "style": "bodyText"
+      },
+      {
+        "text": "[Additional Comments]",
+        "style": "additionalComments"
+      },
+      {
+        "text": "[Signature]",
+        "style": "signature"
+      },
+      {
+        "text": "[Advocate Name]",
+        "style": "signature"
+      },
+      {
+        "text": "[Bar Council Registration Number]",
+        "style": "signature"
+      },
+      {
+        "text": "Advocate for [Party Name]",
+        "style": "signature"
+      }
+    ],
+    "styles": {
+      "title": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          0,
+          0,
+          20
+        ]
+      },
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          10,
+          0,
+          0
+        ]
+      },
+      "subHeader": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          5,
+          0,
+          5
+        ]
+      },
+      "orderTitle": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "subject": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "italic": true,
+        "alignment": "left",
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "signature": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [
+          0,
+          20,
+          0,
+          5
+        ]
+      }
+    }
+  }
+}

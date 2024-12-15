@@ -1,0 +1,127 @@
+{
+  "key": "transfer-petition",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": false,
+    "mappings": [
+      {
+        "topic": "transfer-petition-pdf-generation",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtComplex",
+                "value": {
+                  "path": "$.courtComplex"
+                }
+              },
+              {
+                "variable": "caseNo",
+                "value": {
+                  "path": "$.caseNo"
+                }
+              },
+              {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "originalCourt",
+                "value": {
+                  "path": "$.originalCourt"
+                }
+              },
+              {
+                "variable": "newCourt",
+                "value": {
+                  "path": "$.newCourt"
+                }
+              },
+              {
+                "variable": "judgeNameOrDesignation",
+                "value": {
+                  "path": "$.judgeNameOrDesignation"
+                }
+              },
+              {
+                "variable": "courtAddress",
+                "value": {
+                  "path": "$.courtAddress"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.complainantName"
+                }
+              },
+              {
+                "variable": "advocateName",
+                "value": {
+                  "path": "$.advocateName"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
+                }
+              },
+              {
+                "variable": "grounds",
+                "value": {
+                  "path": "$.grounds"
+                }
+              },
+              {
+                "variable": "specificReliefSought",
+                "value": {
+                  "path": "$.specificReliefSought"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "month",
+                "value": {
+                  "path": "$.month"
+                }
+              },
+              {
+                "variable": "advocateSignature",
+                "value": {
+                  "path": "$.advocateSignature"
+                }
+              },
+              {
+                "variable": "barCouncilRegistrationNumber",
+                "value": {
+                  "path": "$.barCouncilRegistrationNumber"
+                }
+              }
+            ]
+          }
+        ]
+ 
+
